@@ -1,493 +1,1634 @@
-<<<<<<< HEAD
-2017-01-18 23:26:39,274 [com.zaxxer.hikari.HikariDataSource]:
+2017-01-18 23:49:07,784 [com.zaxxer.hikari.HikariDataSource]:
 INFO HikariPool-1 - Started.
-2017-01-18 23:26:40,193 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:49:08,686 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 开始加载种子...
-2017-01-18 23:26:40,293 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:49:08,799 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 种子加载完成...
-2017-01-18 23:26:40,293 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
+2017-01-18 23:49:08,804 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
 INFO 种子分发完成...
-2017-01-18 23:26:44,074 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:12,421 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第1篇
 链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20779.html
-2017-01-18 23:26:44,110 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:12,459 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有1篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20779.html
-2017-01-18 23:26:44,141 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:12,505 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,141 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:13,491 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第2篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20799.html
-2017-01-18 23:26:44,174 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有2篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20799.html
-2017-01-18 23:26:44,179 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,179 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第3篇
 链接为：http://www.nature.com/nature/journal/vaap/ncurrent/full/nature21078.html
-2017-01-18 23:26:44,210 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有3篇爬取成功...url=http://www.nature.com/nature/journal/vaap/ncurrent/full/nature21078.html
-2017-01-18 23:26:44,226 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:13,522 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有2篇爬取成功...url=http://www.nature.com/nature/journal/vaap/ncurrent/full/nature21078.html
+2017-01-18 23:49:13,538 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,395 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:13,660 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第3篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20799.html
+2017-01-18 23:49:13,786 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有3篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20799.html
+2017-01-18 23:49:13,809 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:13,809 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第4篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20792.html
-2017-01-18 23:26:44,454 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有4篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20792.html
-2017-01-18 23:26:44,454 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20804.html
+2017-01-18 23:49:13,833 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有4篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20804.html
+2017-01-18 23:49:13,842 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,454 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:13,842 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第5篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20795.html
-2017-01-18 23:26:44,479 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有5篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20795.html
-2017-01-18 23:26:44,495 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20783.html
+2017-01-18 23:49:13,850 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有5篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20783.html
+2017-01-18 23:49:13,866 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,580 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:13,866 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第6篇
 链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20814.html
-2017-01-18 23:26:44,611 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:13,897 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有6篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20814.html
-2017-01-18 23:26:44,611 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:13,897 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,611 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:15,607 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第7篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20803.html
-2017-01-18 23:26:44,642 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有7篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20803.html
-2017-01-18 23:26:44,658 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/full/nature21079.html
+2017-01-18 23:49:15,650 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有7篇爬取成功...url=http://www.nature.com/nature/journal/vaap/ncurrent/full/nature21079.html
+2017-01-18 23:49:15,665 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,658 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,197 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第8篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20813.html
-2017-01-18 23:26:44,711 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有8篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20813.html
-2017-01-18 23:26:44,742 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20803.html
+2017-01-18 23:49:16,229 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有8篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20803.html
+2017-01-18 23:49:16,250 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,758 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,366 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第9篇
 链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20787.html
-2017-01-18 23:26:44,796 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,397 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有9篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20787.html
-2017-01-18 23:26:44,811 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,413 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,811 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,413 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第10篇
-链接为：http://www.nature.com/nature/journal/vaap/ncurrent/full/nature21079.html
-2017-01-18 23:26:44,827 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有10篇爬取成功...url=http://www.nature.com/nature/journal/vaap/ncurrent/full/nature21079.html
-2017-01-18 23:26:44,843 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature21021.html
+2017-01-18 23:49:16,445 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有10篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature21021.html
+2017-01-18 23:49:16,450 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,843 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,513 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第11篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21036.html
-2017-01-18 23:26:44,858 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,545 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有11篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21036.html
-2017-01-18 23:26:44,878 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,566 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,879 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,566 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第12篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20820.html
-2017-01-18 23:26:44,896 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有12篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20820.html
-2017-01-18 23:26:44,912 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20813.html
+2017-01-18 23:49:16,582 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有12篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20813.html
+2017-01-18 23:49:16,597 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,912 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,729 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第13篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20815.html
-2017-01-18 23:26:44,943 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有13篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20815.html
-2017-01-18 23:26:44,958 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:44,958 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第14篇
 链接为：http://www.nature.com/nature/journal/v541/n7635/full/nature20782.html
-2017-01-18 23:26:44,996 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有14篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7635/full/nature20782.html
-2017-01-18 23:26:45,027 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,767 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有13篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7635/full/nature20782.html
+2017-01-18 23:49:16,767 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,027 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,767 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第14篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20829.html
+2017-01-18 23:49:16,798 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有14篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20829.html
+2017-01-18 23:49:16,813 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:16,813 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第15篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20828.html
-2017-01-18 23:26:45,080 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有15篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20828.html
-2017-01-18 23:26:45,096 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20792.html
+2017-01-18 23:49:16,829 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有15篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20792.html
+2017-01-18 23:49:16,851 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,096 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,851 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第16篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21033.html
-2017-01-18 23:26:45,112 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有16篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21033.html
-2017-01-18 23:26:45,143 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20795.html
+2017-01-18 23:49:16,867 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有16篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20795.html
+2017-01-18 23:49:16,882 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,143 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,929 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第17篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20780.html
-2017-01-18 23:26:45,177 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,951 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有17篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20780.html
-2017-01-18 23:26:45,181 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:16,951 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,181 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:17,052 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次爬取论文32篇，正在爬取第18篇
-链接为：http://www.nature.com/nature/journal/v541/n7635/full/nature20797.html
-2017-01-18 23:26:45,196 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有18篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7635/full/nature20797.html
-2017-01-18 23:26:45,212 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,212 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第19篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20788.html
-2017-01-18 23:26:45,228 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有19篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20788.html
-2017-01-18 23:26:45,243 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,243 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第20篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21031.html
-2017-01-18 23:26:45,278 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有20篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21031.html
-2017-01-18 23:26:45,281 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,281 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第21篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20805.html
-2017-01-18 23:26:45,296 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有21篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20805.html
-2017-01-18 23:26:45,312 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,312 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第22篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20800.html
-2017-01-18 23:26:45,359 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有22篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20800.html
-2017-01-18 23:26:45,359 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,359 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第23篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20794.html
-2017-01-18 23:26:45,381 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有23篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20794.html
-2017-01-18 23:26:45,397 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:17,099 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有18篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20794.html
+2017-01-18 23:49:17,114 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,397 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第24篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20804.html
-2017-01-18 23:26:45,413 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有24篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20804.html
-2017-01-18 23:26:45,428 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:17,114 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第19篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21031.html
+2017-01-18 23:49:17,130 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有19篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21031.html
+2017-01-18 23:49:17,151 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,428 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第25篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20806.html
-2017-01-18 23:26:45,444 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有25篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20806.html
-2017-01-18 23:26:45,459 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,459 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第26篇
+2017-01-18 23:49:17,752 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第20篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21048.html
-2017-01-18 23:26:45,481 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有26篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21048.html
-2017-01-18 23:26:45,481 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:17,783 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有20篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21048.html
+2017-01-18 23:49:17,798 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,481 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第27篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21032.html
-2017-01-18 23:26:45,513 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有27篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21032.html
-2017-01-18 23:26:45,513 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:17,851 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第21篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20800.html
+2017-01-18 23:49:17,882 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有21篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20800.html
+2017-01-18 23:49:17,898 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,513 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第28篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20604.html
-2017-01-18 23:26:45,544 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有28篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20604.html
-2017-01-18 23:26:45,544 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:17,998 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第22篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20788.html
+2017-01-18 23:49:18,014 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有22篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20788.html
+2017-01-18 23:49:18,029 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,559 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第29篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20829.html
-2017-01-18 23:26:45,581 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有29篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20829.html
-2017-01-18 23:26:45,581 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,581 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第30篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20783.html
-2017-01-18 23:26:45,615 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有30篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20783.html
-2017-01-18 23:26:45,625 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,697 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第31篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature21021.html
-2017-01-18 23:26:45,713 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有31篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature21021.html
-2017-01-18 23:26:45,728 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,880 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次爬取论文32篇，正在爬取第32篇
+2017-01-18 23:49:18,215 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第23篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21053.html
-2017-01-18 23:26:45,897 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有32篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21053.html
-2017-01-18 23:26:45,897 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:18,249 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有23篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21053.html
+2017-01-18 23:49:18,251 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的具体日志保存成功
-2017-01-18 23:26:45,897 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:18,330 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第24篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20806.html
+2017-01-18 23:49:18,351 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有24篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20806.html
+2017-01-18 23:49:18,351 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:18,351 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第25篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20815.html
+2017-01-18 23:49:18,383 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有25篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20815.html
+2017-01-18 23:49:18,383 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:19,352 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第26篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20604.html
+2017-01-18 23:49:19,383 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有26篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20604.html
+2017-01-18 23:49:19,399 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:19,598 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第27篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20820.html
+2017-01-18 23:49:19,614 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有27篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20820.html
+2017-01-18 23:49:19,630 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:20,367 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第28篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21033.html
+2017-01-18 23:49:20,405 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有28篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21033.html
+2017-01-18 23:49:20,421 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:20,421 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第29篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21032.html
+2017-01-18 23:49:20,451 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有29篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature21032.html
+2017-01-18 23:49:20,451 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:22,014 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第30篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/full/nature20805.html
+2017-01-18 23:49:22,047 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有30篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7636/full/nature20805.html
+2017-01-18 23:49:22,052 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:28,310 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第31篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/full/nature20797.html
+2017-01-18 23:49:28,330 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有31篇爬取成功...url=http://www.nature.com/nature/journal/v541/n7635/full/nature20797.html
+2017-01-18 23:49:28,355 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:29,087 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次爬取论文32篇，正在爬取第32篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20828.html
+2017-01-18 23:49:29,133 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有32篇爬取成功...url=http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20828.html
+2017-01-18 23:49:29,154 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 爬取过程的具体日志保存成功
+2017-01-18 23:49:29,154 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取完成，本次爬取论文总量：32 成功数：32 失败数：0
-2017-01-18 23:26:45,929 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:29,155 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 爬取过程的总体情况日志保存成功
-2017-01-18 23:26:47,044 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:31,733 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第1篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
-2017-01-18 23:26:47,060 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有1篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
-2017-01-18 23:26:47,097 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,097 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第2篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
-2017-01-18 23:26:47,129 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有2篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
-2017-01-18 23:26:47,129 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,129 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第3篇
 链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
-2017-01-18 23:26:47,160 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有3篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
-2017-01-18 23:26:47,160 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:31,755 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有1篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:49:31,802 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,160 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:31,802 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第2篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:49:31,818 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有2篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:49:31,833 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:31,833 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第3篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:49:31,871 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有3篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:49:31,887 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:31,887 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第4篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
-2017-01-18 23:26:47,182 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有4篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
-2017-01-18 23:26:47,182 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:49:31,918 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有4篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:49:31,918 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,182 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:31,955 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第5篇
 链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
-2017-01-18 23:26:47,213 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:31,972 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有5篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
-2017-01-18 23:26:47,213 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:31,987 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,213 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:31,987 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第6篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
-2017-01-18 23:26:47,229 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有6篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
-2017-01-18 23:26:47,260 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,260 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第7篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
-2017-01-18 23:26:47,276 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有7篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
-2017-01-18 23:26:47,282 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,282 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第8篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
-2017-01-18 23:26:47,282 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有8篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
-2017-01-18 23:26:47,298 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,298 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第9篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
-2017-01-18 23:26:47,314 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有9篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
-2017-01-18 23:26:47,314 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,329 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第10篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
-2017-01-18 23:26:47,345 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有10篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
-2017-01-18 23:26:47,376 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,376 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第11篇
-链接为：http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
-2017-01-18 23:26:47,383 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有11篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
-2017-01-18 23:26:47,383 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,427 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第12篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
-2017-01-18 23:26:47,443 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有12篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
-2017-01-18 23:26:47,458 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,458 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第13篇
 链接为：http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
-2017-01-18 23:26:47,498 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有13篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
-2017-01-18 23:26:47,498 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,003 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有6篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:49:32,019 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,498 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,019 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第7篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:49:32,034 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有7篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:49:32,056 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,056 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第8篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:49:32,072 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有8篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:49:32,088 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,088 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第9篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:49:32,103 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有9篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:49:32,119 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,119 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第10篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:49:32,134 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有10篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:49:32,157 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,157 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第11篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:49:32,172 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有11篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:49:32,188 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,188 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第12篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:49:32,203 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有12篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:49:32,203 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,203 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第13篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:49:32,219 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有13篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:49:32,219 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,287 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第14篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
-2017-01-18 23:26:47,514 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,287 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有14篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
-2017-01-18 23:26:47,514 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,303 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,514 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,319 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第15篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
-2017-01-18 23:26:47,529 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有15篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
-2017-01-18 23:26:47,545 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:49:32,350 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有15篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:49:32,372 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,545 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,372 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第16篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
-2017-01-18 23:26:47,545 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有16篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
-2017-01-18 23:26:47,561 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:49:32,388 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有16篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:49:32,403 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,561 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,403 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第17篇
-链接为：http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
-2017-01-18 23:26:47,580 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有17篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
-2017-01-18 23:26:47,582 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:49:32,419 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有17篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:49:32,434 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,582 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,434 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第18篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
-2017-01-18 23:26:47,598 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有18篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
-2017-01-18 23:26:47,598 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,598 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第19篇
 链接为：http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
-2017-01-18 23:26:47,614 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有19篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
-2017-01-18 23:26:47,629 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,434 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有18篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:49:32,472 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,629 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:32,472 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第19篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:49:32,472 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有19篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:49:32,488 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,557 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第20篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:49:32,557 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有20篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:49:32,573 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,588 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第21篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:49:32,604 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有21篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:49:32,619 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,619 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第22篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:49:32,635 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有22篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:49:32,653 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,699 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第23篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:49:32,715 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有23篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:49:32,730 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,804 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第24篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:49:32,820 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有24篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:49:32,837 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,839 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第25篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:49:32,850 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有25篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:49:32,857 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:32,857 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第26篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:49:32,873 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有26篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:49:32,889 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:33,036 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第27篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:49:33,056 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有27篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:49:33,058 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:33,105 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第28篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:49:33,120 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有28篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:49:33,120 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:33,136 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第29篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:49:33,157 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有29篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:49:33,157 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:33,256 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第30篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:49:33,258 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有30篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:49:33,274 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:33,274 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第31篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:49:33,274 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有31篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:49:33,290 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:33,405 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第32篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:49:33,420 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有32篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:49:33,420 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:33,420 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新完成，本次更新相关指标论文总量：32 成功数：32 失败数：0
+2017-01-18 23:49:33,436 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的总体情况日志保存成功
+2017-01-18 23:49:44,960 [com.weapes.ntpaprseng.crawler.util.Helper]:
+INFO 开始加载种子...
+2017-01-18 23:49:44,960 [com.weapes.ntpaprseng.crawler.util.Helper]:
+INFO 种子加载完成...
+2017-01-18 23:49:44,960 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
+INFO 种子分发完成...
+2017-01-18 23:49:49,678 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第1篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:49:49,694 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有1篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:49:49,725 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,725 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第2篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:49:49,741 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有2篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:49:49,759 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,795 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第3篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:49:49,810 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有3篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:49:49,810 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,810 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第4篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:49:49,826 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有4篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:49:49,841 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,841 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第5篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:49:49,841 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有5篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:49:49,863 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,863 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第6篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:49:49,863 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有6篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:49:49,879 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,879 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第7篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:49:49,894 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有7篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:49:49,910 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,910 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第8篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:49:49,910 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有8篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:49:49,926 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,926 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第9篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:49:49,941 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有9篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:49:49,957 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,957 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第10篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:49:49,963 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有10篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:49:49,963 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,963 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第11篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:49:49,979 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有11篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:49:49,995 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:49,995 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第12篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:49:50,010 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有12篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:49:50,010 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:50,010 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第13篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:49:50,026 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有13篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:49:50,026 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:50,026 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第14篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:49:50,042 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有14篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:49:50,061 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:50,061 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第15篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:49:50,064 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有15篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:49:50,080 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:50,080 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第16篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:49:50,080 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有16篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:49:50,095 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:50,095 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第17篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:49:50,111 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有17篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:49:50,111 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:50,111 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第18篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:49:50,126 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有18篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:49:50,142 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:50,195 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第19篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:49:50,195 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有19篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:49:50,211 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:50,411 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第20篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
-2017-01-18 23:26:47,629 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,426 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有20篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
-2017-01-18 23:26:47,645 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,442 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,729 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,442 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第21篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
-2017-01-18 23:26:47,760 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有21篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
-2017-01-18 23:26:47,760 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:49:50,462 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有21篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:49:50,464 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,760 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,464 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第22篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
-2017-01-18 23:26:47,782 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,480 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有22篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
-2017-01-18 23:26:47,783 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,480 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,783 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,480 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第23篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
-2017-01-18 23:26:47,798 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有23篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
-2017-01-18 23:26:47,798 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:49:50,496 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有23篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:49:50,511 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,845 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,543 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第24篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
-2017-01-18 23:26:47,845 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,565 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有24篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
-2017-01-18 23:26:47,861 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,580 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,861 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,580 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第25篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
-2017-01-18 23:26:47,883 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有25篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
-2017-01-18 23:26:47,899 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,899 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第26篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
-2017-01-18 23:26:47,914 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有26篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
-2017-01-18 23:26:47,914 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,945 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第27篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
-2017-01-18 23:26:47,961 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有27篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
-2017-01-18 23:26:47,977 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,978 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第28篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
-2017-01-18 23:26:47,983 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有28篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
-2017-01-18 23:26:47,983 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:50,580 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有25篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:49:50,596 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:47,983 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 本次更新论文32篇，正在更新第29篇
+2017-01-18 23:49:50,596 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第26篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:49:50,612 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有26篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:49:50,627 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:52,044 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第27篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:49:52,065 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有27篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:49:52,081 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:52,882 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第28篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
-2017-01-18 23:26:47,999 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有29篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
-2017-01-18 23:26:48,014 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:52,898 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有28篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:49:52,929 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:48,014 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:52,929 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第29篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:49:52,945 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有29篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:49:52,961 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:49:53,566 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第30篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
-2017-01-18 23:26:48,030 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:53,583 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有30篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
-2017-01-18 23:26:48,030 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:53,599 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:48,083 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:53,599 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第31篇
 链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
-2017-01-18 23:26:48,099 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:53,614 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 当前共有31篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
-2017-01-18 23:26:48,114 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:53,630 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:48,398 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:53,683 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 本次更新论文32篇，正在更新第32篇
-链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
-2017-01-18 23:26:48,398 [com.weapes.ntpaprseng.crawler.store.Paper]:
-INFO 当前共有32篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
-2017-01-18 23:26:48,414 [com.weapes.ntpaprseng.crawler.store.Paper]:
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:49:53,699 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有32篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:49:53,699 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的具体日志保存成功
-2017-01-18 23:26:48,414 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:53,699 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新完成，本次更新相关指标论文总量：32 成功数：32 失败数：0
-2017-01-18 23:26:48,430 [com.weapes.ntpaprseng.crawler.store.Paper]:
+2017-01-18 23:49:53,714 [com.weapes.ntpaprseng.crawler.store.Paper]:
 INFO 更新过程的总体情况日志保存成功
-=======
-2017-01-18 16:32:09,301 [com.zaxxer.hikari.HikariDataSource]:
-INFO HikariPool-1 - Started.
-2017-01-18 16:32:10,332 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:50:05,042 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 开始加载种子...
-2017-01-18 16:32:10,395 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:50:05,042 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 种子加载完成...
-2017-01-18 16:32:10,395 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
+2017-01-18 23:50:05,042 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
 INFO 种子分发完成...
-2017-01-18 16:32:24,431 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:50:09,901 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第1篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:50:09,932 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有1篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:50:09,954 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:09,954 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第2篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:50:09,970 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有2篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:50:09,986 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:09,986 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第3篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:50:09,986 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有3篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:50:10,001 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,001 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第4篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:50:10,017 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有4篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:50:10,017 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,017 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第5篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:50:10,032 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有5篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:50:10,049 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,055 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第6篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:50:10,055 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有6篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:50:10,070 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,170 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第7篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:50:10,186 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有7篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:50:10,201 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,201 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第8篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:50:10,217 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有8篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:50:10,233 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,233 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第9篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:50:10,233 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有9篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:50:10,254 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,254 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第10篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:50:10,255 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有10篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:50:10,270 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,286 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第11篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:50:10,302 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有11篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:50:10,302 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,471 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第12篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:50:10,486 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有12篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:50:10,502 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,533 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第13篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:50:10,555 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有13篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:50:10,555 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,570 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第14篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:50:10,586 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有14篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:50:10,602 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,602 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第15篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:50:10,633 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有15篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:50:10,633 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,633 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第16篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:50:10,671 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有16篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:50:10,671 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,671 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第17篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:50:10,687 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有17篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:50:10,702 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,771 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第18篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:50:10,787 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有18篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:50:10,803 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,818 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第19篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:50:10,834 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有19篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:50:10,853 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,853 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第20篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:50:10,856 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有20篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:50:10,872 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,872 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第21篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:50:10,887 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有21篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:50:10,903 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:10,919 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第22篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:50:10,934 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有22篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:50:10,934 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,087 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第23篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:50:11,103 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有23篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:50:11,103 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,118 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第24篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:50:11,118 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有24篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:50:11,134 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,187 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第25篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:50:11,187 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有25篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:50:11,203 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,256 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第26篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:50:11,271 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有26篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:50:11,287 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,303 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第27篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:50:11,303 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有27篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:50:11,318 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,356 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第28篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:50:11,356 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有28篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:50:11,371 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,451 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第29篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:50:11,456 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有29篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:50:11,471 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,471 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第30篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:50:11,487 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有30篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:50:11,503 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,673 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第31篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:50:11,684 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有31篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:50:11,694 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,699 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第32篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:50:11,715 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有32篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:50:11,715 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:11,715 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新完成，本次更新相关指标论文总量：32 成功数：32 失败数：0
+2017-01-18 23:50:11,730 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的总体情况日志保存成功
+2017-01-18 23:50:23,089 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 开始加载种子...
-2017-01-18 16:32:24,431 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:50:23,089 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 种子加载完成...
-2017-01-18 16:32:24,431 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
+2017-01-18 23:50:23,089 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
 INFO 种子分发完成...
-2017-01-18 16:32:31,453 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:50:27,857 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第1篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:50:27,873 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有1篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:50:27,904 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:27,904 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第2篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:50:27,920 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有2篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:50:27,920 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:27,920 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第3篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:50:27,936 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有3篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:50:27,953 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:27,988 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第4篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:50:28,004 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有4篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:50:28,004 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,020 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第5篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:50:28,035 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有5篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:50:28,035 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,035 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第6篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:50:28,057 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有6篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:50:28,057 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,073 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第7篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:50:28,088 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有7篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:50:28,088 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,088 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第8篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:50:28,104 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有8篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:50:28,119 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,204 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第9篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:50:28,219 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有9篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:50:28,219 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,219 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第10篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:50:28,235 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有10篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:50:28,254 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,254 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第11篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:50:28,257 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有11篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:50:28,273 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,273 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第12篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:50:28,273 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有12篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:50:28,288 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,288 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第13篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:50:28,304 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有13篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:50:28,304 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,351 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第14篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:50:28,357 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有14篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:50:28,372 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,372 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第15篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:50:28,372 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有15篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:50:28,388 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,388 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第16篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:50:28,404 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有16篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:50:28,404 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,435 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第17篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:50:28,452 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有17篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:50:28,457 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,557 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第18篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:50:28,572 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有18篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:50:28,572 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,590 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第19篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:50:28,602 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有19篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:50:28,611 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,657 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第20篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:50:28,672 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有20篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:50:28,672 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,672 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第21篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:50:28,688 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有21篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:50:28,704 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,704 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第22篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:50:28,719 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有22篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:50:28,719 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,757 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第23篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:50:28,773 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有23篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:50:28,773 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,773 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第24篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:50:28,788 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有24篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:50:28,788 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,820 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第25篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:50:28,835 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有25篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:50:28,835 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,857 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第26篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:50:28,873 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有26篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:50:28,873 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,904 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第27篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:50:28,919 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有27篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:50:28,919 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,919 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第28篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:50:28,935 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有28篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:50:28,953 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:28,957 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第29篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:50:28,973 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有29篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:50:28,973 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:29,119 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第30篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:50:29,119 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有30篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:50:29,135 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:29,135 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第31篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:50:29,152 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有31篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:50:29,157 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:29,688 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第32篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:50:29,704 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有32篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:50:29,735 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:29,735 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新完成，本次更新相关指标论文总量：32 成功数：32 失败数：0
+2017-01-18 23:50:29,735 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的总体情况日志保存成功
+2017-01-18 23:50:41,189 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 开始加载种子...
-2017-01-18 16:32:31,453 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:50:41,189 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 种子加载完成...
-2017-01-18 16:32:31,453 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
+2017-01-18 23:50:41,189 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
 INFO 种子分发完成...
-2017-01-18 16:32:39,493 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:50:45,859 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第1篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:50:45,874 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有1篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:50:45,906 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:45,974 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第2篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:50:45,974 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有2篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:50:45,990 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:45,990 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第3篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:50:46,006 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有3篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:50:46,006 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,043 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第4篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:50:46,043 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有4篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:50:46,059 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,059 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第5篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:50:46,075 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有5篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:50:46,075 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,106 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第6篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:50:46,106 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有6篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:50:46,122 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,122 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第7篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:50:46,143 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有7篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:50:46,144 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,144 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第8篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:50:46,160 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有8篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:50:46,160 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,160 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第9篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:50:46,175 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有9篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:50:46,191 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,191 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第10篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:50:46,207 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有10篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:50:46,207 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,207 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第11篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:50:46,222 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有11篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:50:46,239 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,239 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第12篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:50:46,244 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有12篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:50:46,260 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,322 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第13篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:50:46,344 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有13篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:50:46,344 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,360 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第14篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:50:46,375 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有14篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:50:46,375 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,375 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第15篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:50:46,391 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有15篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:50:46,406 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,522 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第16篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:50:46,544 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有16篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:50:46,544 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,544 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第17篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:50:46,559 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有17篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:50:46,575 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,575 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第18篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:50:46,575 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有18篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:50:46,591 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,675 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第19篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:50:46,691 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有19篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:50:46,691 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,760 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第20篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:50:46,760 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有20篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:50:46,776 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,776 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第21篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:50:46,791 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有21篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:50:46,791 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,791 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第22篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:50:46,807 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有22篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:50:46,823 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,823 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第23篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:50:46,823 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有23篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:50:46,845 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:46,892 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第24篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:50:46,907 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有24篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:50:46,907 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:47,007 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第25篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:50:47,022 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有25篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:50:47,042 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:47,122 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第26篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:50:47,122 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有26篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:50:47,145 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:47,145 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第27篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:50:47,145 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有27篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:50:47,160 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:47,307 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第28篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:50:47,307 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有28篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:50:47,323 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:47,491 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第29篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:50:47,507 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有29篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:50:47,507 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:47,591 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第30篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:50:47,607 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有30篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:50:47,607 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:47,622 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第31篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:50:47,644 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有31篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:50:47,644 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:48,038 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第32篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:50:48,045 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有32篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:50:48,045 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:50:48,045 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新完成，本次更新相关指标论文总量：32 成功数：32 失败数：0
+2017-01-18 23:50:48,061 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的总体情况日志保存成功
+2017-01-18 23:50:59,248 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 开始加载种子...
-2017-01-18 16:32:39,504 [com.weapes.ntpaprseng.crawler.util.Helper]:
+2017-01-18 23:50:59,249 [com.weapes.ntpaprseng.crawler.util.Helper]:
 INFO 种子加载完成...
-2017-01-18 16:32:39,504 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
+2017-01-18 23:50:59,249 [com.weapes.ntpaprseng.crawler.crawler.PaperCrawler]:
 INFO 种子分发完成...
->>>>>>> 1b8e15e90e820fa92e85f878c3578cfcadec272b
+2017-01-18 23:51:04,007 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第1篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:51:04,022 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有1篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20779/metrics
+2017-01-18 23:51:04,050 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,050 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第2篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:51:04,066 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有2篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20787/metrics
+2017-01-18 23:51:04,082 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,082 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第3篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:51:04,082 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有3篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20604/metrics
+2017-01-18 23:51:04,097 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,097 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第4篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:51:04,113 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有4篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20782/metrics
+2017-01-18 23:51:04,113 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,166 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第5篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:51:04,182 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有5篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20800/metrics
+2017-01-18 23:51:04,197 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,197 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第6篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:51:04,213 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有6篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21079/metrics
+2017-01-18 23:51:04,213 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,251 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第7篇
+链接为：http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:51:04,266 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有7篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaap/ncurrent/nature21078/metrics
+2017-01-18 23:51:04,266 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,282 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第8篇
+链接为：http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:51:04,282 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有8篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7635/nature20797/metrics
+2017-01-18 23:51:04,298 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,298 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第9篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:51:04,313 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有9篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20814/metrics
+2017-01-18 23:51:04,313 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,367 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第10篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:51:04,367 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有10篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20794/metrics
+2017-01-18 23:51:04,382 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,429 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第11篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:51:04,429 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有11篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature21021/metrics
+2017-01-18 23:51:04,450 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,467 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第12篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:51:04,482 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有12篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20806/metrics
+2017-01-18 23:51:04,498 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,498 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第13篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:51:04,498 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有13篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20780/metrics
+2017-01-18 23:51:04,514 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,529 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第14篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:51:04,529 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有14篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20783/metrics
+2017-01-18 23:51:04,551 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,614 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第15篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:51:04,630 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有15篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20815/metrics
+2017-01-18 23:51:04,630 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,698 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第16篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:51:04,714 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有16篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20803/metrics
+2017-01-18 23:51:04,730 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,730 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第17篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:51:04,730 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有17篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20820/metrics
+2017-01-18 23:51:04,751 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,751 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第18篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:51:04,751 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有18篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20813/metrics
+2017-01-18 23:51:04,767 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,783 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第19篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:51:04,783 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有19篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20805/metrics
+2017-01-18 23:51:04,798 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,798 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第20篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:51:04,814 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有20篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20788/metrics
+2017-01-18 23:51:04,814 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,851 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第21篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:51:04,867 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有21篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20799/metrics
+2017-01-18 23:51:04,883 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,898 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第22篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:51:04,914 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有22篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20829/metrics
+2017-01-18 23:51:04,914 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:04,914 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第23篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:51:04,930 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有23篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21032/metrics
+2017-01-18 23:51:04,947 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,014 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第24篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:51:05,014 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有24篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20795/metrics
+2017-01-18 23:51:05,029 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,082 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第25篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:51:05,098 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有25篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21053/metrics
+2017-01-18 23:51:05,098 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,214 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第26篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:51:05,229 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有26篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21036/metrics
+2017-01-18 23:51:05,229 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,267 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第27篇
+链接为：http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:51:05,282 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有27篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/v541/n7636/nature20792/metrics
+2017-01-18 23:51:05,298 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,329 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第28篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:51:05,329 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有28篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21048/metrics
+2017-01-18 23:51:05,351 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,398 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第29篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:51:05,414 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有29篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20804/metrics
+2017-01-18 23:51:05,414 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,414 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第30篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:51:05,429 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有30篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21031/metrics
+2017-01-18 23:51:05,449 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,449 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第31篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:51:05,451 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有31篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature20828/metrics
+2017-01-18 23:51:05,467 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,730 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 本次更新论文32篇，正在更新第32篇
+链接为：http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:51:05,747 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 当前共有32篇论文相关指标更新成功...链接为:http://www.nature.com/nature/journal/vaop/ncurrent/nature21033/metrics
+2017-01-18 23:51:05,751 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的具体日志保存成功
+2017-01-18 23:51:05,751 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新完成，本次更新相关指标论文总量：32 成功数：32 失败数：0
+2017-01-18 23:51:05,751 [com.weapes.ntpaprseng.crawler.store.Paper]:
+INFO 更新过程的总体情况日志保存成功

@@ -2,9 +2,6 @@ package com.weapes.ntpaprseng.crawler.util;
 
 import java.text.DecimalFormat;
 
-/**
- * Created by 不一样的天空 on 2016/8/18.
- */
 public final class Match {
     private static final double DEFAULT_SIMILARITY = 0.40;
 

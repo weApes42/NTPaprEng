@@ -2,9 +2,6 @@ package com.weapes.ntpaprseng.dependencies;
 
 import org.junit.Test;
 
-/**
- * Created by 不一样的天空 on 2016/11/2.
- */
 public class ESClientTest {
     @Test
     public void testESClientConnectivity(){

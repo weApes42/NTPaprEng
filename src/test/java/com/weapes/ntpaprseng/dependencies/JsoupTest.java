@@ -14,9 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-/**
- * Created by lawrence on 16/8/7.
- */
 public class JsoupTest {
 
     private static final int TIME_2_DELAY = 100000;

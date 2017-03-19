@@ -6,9 +6,6 @@ import com.weapes.ntpaprseng.crawler.util.Helper;
 
 import java.io.IOException;
 
-/**
- * Created by lawrence on 16/8/17.
- */
 public class PaperMetricsLink extends Link {
     public PaperMetricsLink(String url) {
         super(url);

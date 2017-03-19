@@ -15,10 +15,6 @@ import java.util.concurrent.ExecutorService;
 import static com.weapes.ntpaprseng.crawler.log.Log.getCrawlingFailedNumber;
 import static com.weapes.ntpaprseng.crawler.log.Log.getCrawlingSucceedNumbers;
 
-
-/**
- * Created by lawrence on 16/8/8.
- */
 class StorableFetcher<F extends Followable> implements Runnable {
 
     private final ExecutorService creator;

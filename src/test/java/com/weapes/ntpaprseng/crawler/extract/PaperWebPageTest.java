@@ -6,9 +6,6 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-/**
- * Created by lawrence on 16/8/9.
- */
 public class PaperWebPageTest {
     @Test
     @Ignore

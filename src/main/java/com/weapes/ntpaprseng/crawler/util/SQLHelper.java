@@ -8,9 +8,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by  不一样的天空  on 2016/8/30.
- */
 public class SQLHelper {
     // 通过URL来更新REF_DATA表
 //    private static final String REF_UPDATE_SQL =

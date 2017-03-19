@@ -2,9 +2,6 @@ package com.weapes.ntpaprseng.crawler.log;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * Created by Programmer on 2016/8/14.
- */
 public class Log {
     //单次爬取论文总量
     private static AtomicInteger URL_NUMBERS = new AtomicInteger();

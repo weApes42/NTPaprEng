@@ -11,9 +11,6 @@ import java.net.UnknownHostException;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
-/**
- * Created by 不一样的天空 on 2016/11/2.
- */
 public class ESClient {
     private static final String IP = "172.29.108.32";
     private static final int PORT = 9300;

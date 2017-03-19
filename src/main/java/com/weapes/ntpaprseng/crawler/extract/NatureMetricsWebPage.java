@@ -10,9 +10,6 @@ import org.jsoup.select.Elements;
 
 import java.util.*;
 
-/**
- * Created by lawrence on 16/8/17.
- */
 public class NatureMetricsWebPage extends WebPage {
 
     //存储抽取后的字段和数值

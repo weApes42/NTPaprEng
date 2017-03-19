@@ -2,9 +2,6 @@ package com.weapes.ntpaprseng.crawler.crawler;
 
 import com.weapes.ntpaprseng.crawler.store.Storable;
 
-/**
- * Created by lawrence on 16/8/8.
- */
 class StorableHandler<S extends Storable> implements Runnable {
 
     private final S storable;

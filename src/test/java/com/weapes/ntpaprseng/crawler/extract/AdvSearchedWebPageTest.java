@@ -8,9 +8,6 @@ import org.junit.Test;
 
 import java.util.List;
 
-/**
- * Created by lawrence on 16/8/9.
- */
 public class AdvSearchedWebPageTest {
     @Test
     @Ignore

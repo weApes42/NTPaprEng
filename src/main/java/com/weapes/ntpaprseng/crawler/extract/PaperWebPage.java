@@ -12,9 +12,6 @@ import java.util.stream.Collectors;
 
 import static com.weapes.ntpaprseng.crawler.util.Helper.getCrawlTime;
 
-/**
- * Created by lawrence on 16/8/8.
- */
 public class PaperWebPage extends WebPage {
 
     // 论文信息抽取CSS选择器

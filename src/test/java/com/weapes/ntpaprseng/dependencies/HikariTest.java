@@ -11,9 +11,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by lawrence on 16/8/8.
- */
 public class HikariTest {
 
     @Test

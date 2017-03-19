@@ -5,10 +5,6 @@ import com.weapes.ntpaprseng.crawler.util.Helper;
 
 import java.io.IOException;
 
-/**
- * 种子链接,高级搜索配置好后Submit创建的链接
- * Created by lawrence on 16/8/8.
- */
 public class AdvSearchLink extends Link {
     public AdvSearchLink(final String urlParsed) {
         super(urlParsed);

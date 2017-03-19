@@ -1,20 +1,11 @@
 package com.weapes.ntpaprseng.crawler.crawler;
 
-import com.weapes.ntpaprseng.crawler.follow.PaperMetricsLink;
 import com.weapes.ntpaprseng.crawler.log.Log;
 import com.weapes.ntpaprseng.crawler.util.Helper;
 
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
-
-
-/**
- * Created by lawrence on 16/8/16.
- */
 public class DetailCrawler implements Crawler {
 
     //生产者消费者线程数,可以根据环境进行调整

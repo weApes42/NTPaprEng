@@ -7,10 +7,6 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-/**
- * Created by ming on 2016/8/23.
- * 论文指标存储测试
- */
 public class MetricsPaperTest {
     @Test
     @Ignore

@@ -7,9 +7,6 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.LoggerFactory;
 
-/**
- * Created by Programmer on 2016/8/12.
- */
 public class Slf4jTest {
     @Test
     @Ignore

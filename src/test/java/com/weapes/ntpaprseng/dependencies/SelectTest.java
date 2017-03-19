@@ -14,10 +14,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Programmer on 2016/8/17.
- */
-
 public class SelectTest {
 
     private final Map<String, Integer> hashMap = new HashMap<>();

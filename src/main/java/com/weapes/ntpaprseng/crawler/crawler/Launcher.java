@@ -3,9 +3,6 @@ package com.weapes.ntpaprseng.crawler.crawler;
 import com.weapes.ntpaprseng.crawler.util.Helper;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by Evan Hung on 2017/1/14.
- */
 public class Launcher {
 
     public static void main(String args[]) throws InterruptedException {

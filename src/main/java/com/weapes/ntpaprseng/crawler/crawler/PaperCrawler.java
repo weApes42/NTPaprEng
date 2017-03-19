@@ -5,9 +5,7 @@ import org.slf4j.Logger;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-/**
- * Created by lawrence on 16/8/7.
- */
+
 class PaperCrawler implements Crawler {
 
     //生产者消费者线程数

@@ -21,11 +21,6 @@ import static com.weapes.ntpaprseng.crawler.log.Log.*;
 import static com.weapes.ntpaprseng.crawler.util.Helper.*;
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
-/**
- * 论文Model
- * Created by lawrence on 16/8/9.
- * 存储论文信息到第一张表，并存储论文相关指标页面url到第二张表
- */
 public class Paper implements Storable {
 
     private static final Logger LOGGER =

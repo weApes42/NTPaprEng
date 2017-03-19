@@ -18,9 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by lawrence on 16/8/8.
- */
 public class AdvSearchedWebPage extends WebPage {
 
     private static final String LAST_URL_UPDATE_SQL =

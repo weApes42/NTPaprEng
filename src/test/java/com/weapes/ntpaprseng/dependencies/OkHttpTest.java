@@ -8,9 +8,6 @@ import java.io.IOException;
 
 import static junit.framework.TestCase.assertNotNull;
 
-/**
- * Created by lawrence on 16/8/7.
- */
 public class OkHttpTest {
 
     @Test

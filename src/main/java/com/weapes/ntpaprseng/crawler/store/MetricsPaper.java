@@ -21,10 +21,6 @@ import static com.weapes.ntpaprseng.crawler.util.Helper.firstInsertUpdateDetailL
 import static com.weapes.ntpaprseng.crawler.util.Helper.getLogger;
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
-/**
- * Created by 不一样的天空 on 2016/8/18.
- * 每次以主键指标页面URL为选择条件更新其它字段
- */
 public class MetricsPaper implements Storable{
 
     private static final Logger LOGGER =

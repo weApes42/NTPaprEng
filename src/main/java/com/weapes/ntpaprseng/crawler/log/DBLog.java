@@ -12,9 +12,6 @@ import java.sql.SQLException;
 
 import static com.weapes.ntpaprseng.crawler.util.Helper.getLogger;
 
-/**
- * Created by 不一样的天空 on 2016/11/23.
- */
 public class DBLog {
     private static final Logger LOGGER =
             getLogger(Paper.class);

@@ -1,8 +1,5 @@
 package com.weapes.ntpaprseng.crawler.util;
 
-/**
- * Created by 不一样的天空 on 2017/1/14.
- */
 public class FormatHelper {
 
     class PublishTimeFormatter implements TimeFormatter{

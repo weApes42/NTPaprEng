@@ -7,9 +7,6 @@ import org.junit.Test;
 
 import java.util.List;
 
-/**
- * Created by lawrence on 16/8/8.
- */
 public class HelperTest {
     @Test
     @Ignore

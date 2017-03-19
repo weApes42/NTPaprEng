@@ -31,9 +31,6 @@ import java.util.stream.Collectors;
 
 import static java.nio.charset.Charset.forName;
 
-/**
- * Created by lawrence on 16/8/7.
- */
 public final class Helper {
     public static boolean isQueryFinished = false; //遍历寻找上次爬取的最后一篇论文完成的标记
     public static boolean isFirstUrl = true; //本次爬取第一篇论文的标记
@@ -312,8 +309,6 @@ public final class Helper {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(jsonObject.getJSONObject("interval").getInteger("task_period"));
-
         return jsonObject.getJSONObject("interval").getInteger("task_period");
     }
 
