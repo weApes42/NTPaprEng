@@ -42,7 +42,7 @@ class StorableFetcher<F extends Followable> implements Runnable {
                 dispatch(extractable.extract());
             } else {//如果是高级检索分页链接
                 List<? extends ExtractedObject> extractedObjectsList = extractable.extractAll();
-                if (extractedObjectsList.size() == 0){//没有新刊登的待爬取论文
+                if (extractedObjectsList.size() == 0) {//没有新刊登的待爬取论文
                     Helper.isFirstUrl = true; //下次任务开始时有第一条论文url
                     Helper.isCrawlFinished = true; //爬取任务结束
                     getCrawlingSucceedNumbers().set(0);
@@ -70,7 +70,7 @@ class StorableFetcher<F extends Followable> implements Runnable {
      */
     private void dispatch(final ExtractedObject extractedObject) {
         if (extractedObject instanceof Followable) {//如果是链接，则继续生产，进行follow和extract
-             creator.submit(new StorableFetcher<>(creator, consumer, (Link) extractedObject));
+            creator.submit(new StorableFetcher<>(creator, consumer, (Link) extractedObject));
         } else {//如果不是链接 就是storable的爬取数据，进行消费
             consumer.submit(new StorableHandler<>((Storable) extractedObject));
         }
