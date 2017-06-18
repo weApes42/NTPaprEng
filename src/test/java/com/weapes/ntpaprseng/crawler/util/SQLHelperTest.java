@@ -6,7 +6,7 @@ import org.junit.Test;
 public class SQLHelperTest {
     @Test
     @Ignore
-    public void addColumns(){
+    public void addColumns() {
         Helper.getRefDataNum();
     }
 }

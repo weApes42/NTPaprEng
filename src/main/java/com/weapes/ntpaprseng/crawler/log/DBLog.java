@@ -18,25 +18,25 @@ public class DBLog {
 
     private static final String CRAWL_DETAIL_LOG =
             "INSERT INTO CrawlDetailLog(" +
-                    "URL," + "ArticlePosition," + "TotalNumber," +"IsSuccessful,"+"CrawlTime)" +
+                    "URL," + "ArticlePosition," + "TotalNumber," + "IsSuccessful," + "CrawlTime)" +
                     "VALUES(?, ?, ?, ?, ?)";
 
     private static final String CRAWL_LOG =
             "INSERT INTO CrawlLog(" +
-                    "CrawlTime,"+"SuccessfulNumber,"+"FailedNumber,"+ "TotalNumber,"+ "AverageTime)"+
-                  "VALUES(?, ?, ?, ?,?)";
+                    "CrawlTime," + "SuccessfulNumber," + "FailedNumber," + "TotalNumber," + "AverageTime)" +
+                    "VALUES(?, ?, ?, ?,?)";
 
     private static final String UPDATE_DETAIL_LOG =
-            "INSERT INTO UpdateDetailLog(" + "URL," + "ArticlePosition," + "TotalNumber," +"IsSuccessful,"+
+            "INSERT INTO UpdateDetailLog(" + "URL," + "ArticlePosition," + "TotalNumber," + "IsSuccessful," +
                     "UpdateTime)" + "VALUES(?, ?, ?, ?, ?)";
 
     private static final String UPDATE_LOG =
             "INSERT INTO UpdateLog(" +
-                    "UpdateTime,"+"SuccessfulNumber,"+"FailedNumber,"+ "TotalNumber,"+ "AverageTime)"+
+                    "UpdateTime," + "SuccessfulNumber," + "FailedNumber," + "TotalNumber," + "AverageTime)" +
                     "VALUES(?, ?, ?, ?,?)";
 
 
-    public static void saveCrawlDetailLog(String url, int currentPosition, int totalNumber, boolean isSuccessful,String crawlTime) {
+    public static void saveCrawlDetailLog(String url, int currentPosition, int totalNumber, boolean isSuccessful, String crawlTime) {
         final HikariDataSource mysqlDataSource =
                 DataSource.getMysqlDataSource();
         // 从DB连接池得到连接
@@ -99,7 +99,7 @@ public class DBLog {
         }
     }
 
-    public static void saveUpdateDetailLog(String url, int currentPosition, int totalNumber, boolean isSuccessful,String updateTime) {
+    public static void saveUpdateDetailLog(String url, int currentPosition, int totalNumber, boolean isSuccessful, String updateTime) {
         final HikariDataSource mysqlDataSource =
                 DataSource.getMysqlDataSource();
         // 从DB连接池得到连接
@@ -137,7 +137,7 @@ public class DBLog {
         }
     }
 
-    public static void saveFinalUpdateLog(String updateTime,int successfulNumber,int failedNumber, int totalNumber,String averageTime) {
+    public static void saveFinalUpdateLog(String updateTime, int successfulNumber, int failedNumber, int totalNumber, String averageTime) {
         final HikariDataSource mysqlDataSource =
                 DataSource.getMysqlDataSource();
         // 从DB连接池得到连接

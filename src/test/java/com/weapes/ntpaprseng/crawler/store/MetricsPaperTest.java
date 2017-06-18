@@ -1,7 +1,6 @@
 package com.weapes.ntpaprseng.crawler.store;
 
 import com.weapes.ntpaprseng.crawler.extract.NatureMetricsWebPage;
-import com.weapes.ntpaprseng.crawler.extract.PaperWebPage;
 import com.weapes.ntpaprseng.crawler.util.Helper;
 import org.junit.Assert;
 import org.junit.Ignore;

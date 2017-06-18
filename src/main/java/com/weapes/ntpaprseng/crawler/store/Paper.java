@@ -3,9 +3,9 @@ package com.weapes.ntpaprseng.crawler.store;
 import com.weapes.ntpaprseng.crawler.log.DBLog;
 import com.weapes.ntpaprseng.crawler.log.Log;
 import com.weapes.ntpaprseng.crawler.search.ESClient;
-import com.weapes.ntpaprseng.crawler.util.SQLHelper;
 import com.weapes.ntpaprseng.crawler.util.FormatHelper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
+import com.weapes.ntpaprseng.crawler.util.SQLHelper;
 import com.weapes.ntpaprseng.crawler.util.TimeFormatter;
 import com.zaxxer.hikari.HikariDataSource;
 import org.elasticsearch.common.xcontent.XContentBuilder;
@@ -240,8 +240,8 @@ public class Paper implements Storable {
 
     private boolean putNTPaperIntoES() {
         XContentBuilder json = null;
-        FormatHelper formatHelper=new FormatHelper();
-        TimeFormatter formatter=formatHelper.formatPublishTime(getPublishTime());
+        FormatHelper formatHelper = new FormatHelper();
+        TimeFormatter formatter = formatHelper.formatPublishTime(getPublishTime());
         try {
             json = jsonBuilder().startObject()
                     .field("URL", getUrl())
@@ -295,8 +295,8 @@ public class Paper implements Storable {
 
     private boolean putRefDataIntoES() {
         XContentBuilder json = null;
-        FormatHelper formatHelper=new FormatHelper();
-        TimeFormatter formatter=formatHelper.formatUpdateTime(Helper.getUpdateTime());
+        FormatHelper formatHelper = new FormatHelper();
+        TimeFormatter formatter = formatHelper.formatUpdateTime(Helper.getUpdateTime());
         try {
             json = jsonBuilder().startObject()
                     .field("URL", getMetricsUrl())

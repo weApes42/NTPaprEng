@@ -3,7 +3,6 @@ package com.weapes.ntpaprseng.crawler.util;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.CalendarCodec;
 import com.weapes.ntpaprseng.crawler.follow.AdvSearchLink;
 import com.weapes.ntpaprseng.crawler.follow.PaperMetricsLink;
 import com.weapes.ntpaprseng.crawler.store.DataSource;
@@ -22,7 +21,6 @@ import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -32,6 +30,22 @@ import java.util.stream.Collectors;
 import static java.nio.charset.Charset.forName;
 
 public final class Helper {
+    private static final OkHttpClient OK_HTTP_CLIENT =
+            new OkHttpClient.Builder()
+                    .readTimeout(1, TimeUnit.MINUTES)
+                    .build();
+    private static final Pattern URL_CHECKER =
+            Pattern.compile("\\w+://[\\w.]+/\\S*");
+    private static final String BASE_URL =
+            "http://www.nature.com/search";
+    private static final String JSON_CFG_FILE_PATH =
+            "conf" + File.separator + "filecfg.json";
+    private static final Logger LOGGER =
+            getLogger(Helper.class);
+    private static final String DATE_FORMAT =
+            "yyyy年MM月dd日 HH:mm";
+    private static final String UPDATE_TIME_FORMAT =
+            "yyyy年MM月dd日 HH:mm:ss:SSS";
     public static boolean isQueryFinished = false; //遍历寻找上次爬取的最后一篇论文完成的标记
     public static boolean isFirstUrl = true; //本次爬取第一篇论文的标记
     public static String lastUrlForLastTime; //上次爬取最后一篇论文
@@ -44,24 +58,7 @@ public final class Helper {
     public static String updateStartDate;//更新开始日期
     public static boolean firstInsertCrawlDetailLog = true;//首次插入CrawlDetailLog
     public static boolean firstInsertUpdateDetailLog = true;//首次插入UpdateDetailLog
-    private static final OkHttpClient OK_HTTP_CLIENT =
-            new OkHttpClient.Builder()
-                    .readTimeout(1, TimeUnit.MINUTES)
-                    .build();
-    private static final Pattern URL_CHECKER =
-            Pattern.compile("\\w+://[\\w.]+/\\S*");
-    private static final String BASE_URL =
-            "http://www.nature.com/search";
 
-    private static final String JSON_CFG_FILE_PATH =
-            "conf" + File.separator + "filecfg.json";
-    private static final Logger LOGGER =
-            getLogger(Helper.class);
-
-    private static final String DATE_FORMAT =
-            "yyyy年MM月dd日 HH:mm";
-    private static final String UPDATE_TIME_FORMAT =
-            "yyyy年MM月dd日 HH:mm:ss:SSS";
     static {
         PropertyConfigurator.configure(
                 getCfg().getString("log4j")
@@ -241,7 +238,7 @@ public final class Helper {
         final HikariDataSource mysqlDataSource = DataSource.getMysqlDataSource();
         try (final Connection connection = mysqlDataSource.getConnection()) {
             try (final Statement statement = connection.createStatement()) {
-                try (ResultSet results =statement.executeQuery("select count(DISTINCT URL) as rowCount from REF_DATA")) {
+                try (ResultSet results = statement.executeQuery("select count(DISTINCT URL) as rowCount from REF_DATA")) {
                     results.next();
                     num = results.getInt("rowCount");
                 }
@@ -272,27 +269,27 @@ public final class Helper {
 
     public static String getCrawlTime() {
         final Date now = new Date();
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat(DATE_FORMAT);
-        String time=simpleDateFormat.format(now);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT);
+        String time = simpleDateFormat.format(now);
         return time;
     }
 
     public static String getUpdateTime() {
         final Date now = new Date();
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat(UPDATE_TIME_FORMAT);
-        String time=simpleDateFormat.format(now);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(UPDATE_TIME_FORMAT);
+        String time = simpleDateFormat.format(now);
         return time;
     }
 
-    public static String getSeconds(long millis){
-        float second= (float) (millis/1000.0);
-        return second+"秒";
+    public static String getSeconds(long millis) {
+        float second = (float) (millis / 1000.0);
+        return second + "秒";
     }
 
-    public static long getMillis(String time){
-        SimpleDateFormat format=new SimpleDateFormat(DATE_FORMAT);
+    public static long getMillis(String time) {
+        SimpleDateFormat format = new SimpleDateFormat(DATE_FORMAT);
         try {
-            Date date=format.parse(time);
+            Date date = format.parse(time);
             System.out.println(date.getTime());
             return date.getTime();
         } catch (ParseException e) {
@@ -300,6 +297,7 @@ public final class Helper {
             return System.currentTimeMillis();
         }
     }
+
     //获取任务周期
     public static int getTaskPeriod() {
         String filePath = getCfg().getString("allPapersFetch");

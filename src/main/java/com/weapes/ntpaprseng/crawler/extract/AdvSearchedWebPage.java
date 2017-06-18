@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 public class AdvSearchedWebPage extends WebPage {
 
     private static final String LAST_URL_UPDATE_SQL =
-            "UPDATE HELPER SET "+" last_url = ? "+ "WHERE id = 1";
+            "UPDATE HELPER SET " + " last_url = ? " + "WHERE id = 1";
 
     // 每页论文数量
     private static final int NUM_OF_PAPERS_PER_PAGE = 25;
@@ -36,6 +36,26 @@ public class AdvSearchedWebPage extends WebPage {
 
     public AdvSearchedWebPage(final String text, final String url) {
         super(text, url, true);
+    }
+
+    private static void saveFirstUrl(String url) {
+        if (Helper.isFirstUrl) {//如果是第一篇论文，则更新论文链接到表HELPER中的last_url字段
+            boolean isSucceed = false;
+            final HikariDataSource mysqlDataSource = DataSource.getMysqlDataSource();
+            try (final Connection connection = mysqlDataSource.getConnection()) {
+                try (final PreparedStatement preparedStatement = connection.prepareStatement(LAST_URL_UPDATE_SQL)) {
+                    preparedStatement.setString(1, url);
+                    isSucceed = preparedStatement.executeUpdate() != 0;
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            if (isSucceed) {//成功之后就更改isFirstUrl为false 即后面的论文都不是第一篇了
+                Helper.isFirstUrl = false;
+            }
+        }
     }
 
     @Override
@@ -71,7 +91,7 @@ public class AdvSearchedWebPage extends WebPage {
         // 利用上次爬取的最后一篇论文链接来遍历对比本次爬取一定范围内的所有链接，
         // 来确定本次需要爬取得论文链接，当匹配到上次爬取最后一篇论文链接则说明后面的就是上次已经爬取过的，即检查完毕
         String lastUrlForLastTime = Helper.lastUrlForLastTime;
-        if (lastUrlForLastTime == null || lastUrlForLastTime.equals("")){
+        if (lastUrlForLastTime == null || lastUrlForLastTime.equals("")) {
             Log.getUrlNumbers().addAndGet(1);
             return true;
         }
@@ -85,26 +105,6 @@ public class AdvSearchedWebPage extends WebPage {
         }
         //没匹配到且检查完毕，说明是上次爬取过的非最后一篇论文，本次不再爬
         return false;
-    }
-
-    private static void saveFirstUrl(String url) {
-        if (Helper.isFirstUrl) {//如果是第一篇论文，则更新论文链接到表HELPER中的last_url字段
-            boolean isSucceed = false;
-            final HikariDataSource mysqlDataSource = DataSource.getMysqlDataSource();
-            try (final Connection connection = mysqlDataSource.getConnection()){
-                try (final PreparedStatement preparedStatement = connection.prepareStatement(LAST_URL_UPDATE_SQL)) {
-                    preparedStatement.setString(1, url);
-                    isSucceed = preparedStatement.executeUpdate() != 0;
-                }catch (SQLException e){
-                    e.printStackTrace();
-                }
-            }catch (SQLException e){
-                e.printStackTrace();
-            }
-            if (isSucceed) {//成功之后就更改isFirstUrl为false 即后面的论文都不是第一篇了
-                Helper.isFirstUrl = false;
-            }
-        }
     }
 
     // 得到其他AdvSearched页面链接

@@ -4,10 +4,10 @@ import org.junit.Test;
 
 public class ESClientTest {
     @Test
-    public void testESClientConnectivity(){
+    public void testESClientConnectivity() {
 //        String log4jConfPath = "./conf/log4j.properties";
 //        PropertyConfigurator.configure(log4jConfPath);
-          String url="http://www.nature.com/nature/journal/v529/n7584/full/nature16450.html";
+        String url = "http://www.nature.com/nature/journal/v529/n7584/full/nature16450.html";
 
 //          String time="2016年11月";
 //          Random random=new Random();
@@ -25,5 +25,5 @@ public class ESClientTest {
 //                 System.out.print("NTPapr插入失败");
 //             }
 //         }
-   }
+    }
 }
