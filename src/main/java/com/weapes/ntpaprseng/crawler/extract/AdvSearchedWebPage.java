@@ -52,10 +52,10 @@ public class AdvSearchedWebPage extends WebPage {
 
         if (isFirstPage()) {
             allLinks.addAll(getSiblingLinks(dom));
-            Helper.advSearchLinkNum = allLinks.size() + 1; //获得其他页面个数
+            Helper.advSearchLinkNum = allLinks.size() + 1; //获得分页页面链接个数
         }
 
-        // 得到目前页面论文链接
+        // 得到目前页面所有论文链接
         final List<? extends Link> paperLinks =
                 getPaperLinks(parsePaperLinks(dom));
         allLinks.addAll(paperLinks);

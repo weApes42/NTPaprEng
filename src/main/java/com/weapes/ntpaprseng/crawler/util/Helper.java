@@ -46,7 +46,7 @@ public final class Helper {
     public static boolean firstInsertUpdateDetailLog = true;//首次插入UpdateDetailLog
     private static final OkHttpClient OK_HTTP_CLIENT =
             new OkHttpClient.Builder()
-                    .readTimeout(1, TimeUnit.MINUTES)
+                    .readTimeout(5, TimeUnit.MINUTES)
                     .build();
     private static final Pattern URL_CHECKER =
             Pattern.compile("\\w+://[\\w.]+/\\S*");

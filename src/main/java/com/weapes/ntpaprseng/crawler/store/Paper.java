@@ -160,6 +160,8 @@ public class Paper implements Storable {
                 // 判断爬取论文信息操作是否成功
                 isSucceed = paperPreparedStatement.executeUpdate() != 0;
             } catch (SQLException e) {
+                e.printStackTrace();
+                System.out.print(getUrl());
                 System.out.print(e.getSQLState() + "  " + e.getMessage());
             }
 
