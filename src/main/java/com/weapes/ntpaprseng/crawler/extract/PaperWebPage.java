@@ -47,7 +47,6 @@ public class PaperWebPage extends WebPage {
     private static final int ISSUE_TEXT_OFFSET = 6;
 
 
-
     public PaperWebPage(final String text, final String url) {
         super(text, url);
     }

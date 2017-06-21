@@ -1,8 +1,8 @@
 package com.weapes.ntpaprseng.crawler.extract;
 
-import com.weapes.ntpaprseng.crawler.util.Match;
 import com.weapes.ntpaprseng.crawler.store.MetricsPaper;
 import com.weapes.ntpaprseng.crawler.store.Storable;
+import com.weapes.ntpaprseng.crawler.util.Match;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -12,17 +12,14 @@ import java.util.*;
 
 public class NatureMetricsWebPage extends WebPage {
 
-    //存储抽取后的字段和数值
-    private Map<String, Integer> hashMap= new HashMap<>();
-
     //选择器路径
     private static String TotalCitations = "#am-container > div.am-cols.cleared > div > div.am-module.citations-container " +
             "> div > section > div > ul > li";
-
     private static String OnlineAttention = "#altmetric-metrics > div.cleared > div.altmetric-key > ul > li.altmetric";
-
     private static String PageViews = "#am-container > div.am-module.pageview-metrics-container.page-views " +
             "> article > div > div.page-view-header > h2>span.total";
+    //存储抽取后的字段和数值
+    private Map<String, Integer> hashMap = new HashMap<>();
 
     public NatureMetricsWebPage(String html, String metricsUrl) {
         super(html, metricsUrl);
@@ -34,7 +31,7 @@ public class NatureMetricsWebPage extends WebPage {
         Document doc = Jsoup.parse(getText());
         String number, referenceUnit;
         //抽取Total citations信息
-        Elements citation= doc.select(TotalCitations);
+        Elements citation = doc.select(TotalCitations);
         for (Element element : citation) {
             if (!element.text().contains("Data not available")) {
                 number = element.select("a > div").text();
@@ -44,7 +41,7 @@ public class NatureMetricsWebPage extends WebPage {
         }
 
         //抽取Online attention信息
-        Elements onlineAttention= doc.select(OnlineAttention);
+        Elements onlineAttention = doc.select(OnlineAttention);
         for (Element element : onlineAttention) {
             referenceUnit = null;
             referenceUnit = element.select("div").text();
@@ -54,7 +51,7 @@ public class NatureMetricsWebPage extends WebPage {
             }
         }
 
-        final Set<Map.Entry<String,Integer>> entries = hashMap.entrySet();
+        final Set<Map.Entry<String, Integer>> entries = hashMap.entrySet();
         MetricsPaper metricsPaper = new MetricsPaper(
                 getUrl(),
                 parsePageViews(doc),
@@ -80,13 +77,13 @@ public class NatureMetricsWebPage extends WebPage {
         return metricsPaper;
     }
 
-    private int parsePageViews(final Document doc){
+    private int parsePageViews(final Document doc) {
         if (!doc.toString().contains("page-view-header")) //如果没有PageViews
             return 0;
         return Integer.parseInt(doc.select(PageViews).text().replace(",", ""));
     }
 
-    private int parseWebOfScience(final Set<Map.Entry<String,Integer>> entries){
+    private int parseWebOfScience(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("web of science")) {
@@ -98,7 +95,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseCrossRef(final Set<Map.Entry<String,Integer>> entries){
+    private int parseCrossRef(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("crossref")) {
@@ -110,7 +107,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseScopus(final Set<Map.Entry<String,Integer>> entries){
+    private int parseScopus(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("scopus")) {
@@ -122,7 +119,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseNewsOutlets(final Set<Map.Entry<String,Integer>> entries){
+    private int parseNewsOutlets(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("news outlets")) {
@@ -134,7 +131,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseReddit(final Set<Map.Entry<String,Integer>> entries){
+    private int parseReddit(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("reddit")) {
@@ -146,7 +143,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseBlog(final Set<Map.Entry<String,Integer>> entries){
+    private int parseBlog(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("blogged")) {
@@ -158,7 +155,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseTweet(final Set<Map.Entry<String,Integer>> entries){
+    private int parseTweet(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("tweeted")) {
@@ -170,7 +167,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseFacebook(final Set<Map.Entry<String,Integer>> entries){
+    private int parseFacebook(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("facebook")) {
@@ -182,7 +179,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseGoogle(final Set<Map.Entry<String,Integer>> entries){
+    private int parseGoogle(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("google")) {
@@ -194,7 +191,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parsePinterest(final Set<Map.Entry<String,Integer>> entries){
+    private int parsePinterest(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (Match.isMatching(key, "printerest")) {
@@ -209,7 +206,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseWikipedia(final Set<Map.Entry<String,Integer>> entries){
+    private int parseWikipedia(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("wikipedia")) {
@@ -221,7 +218,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseMendeley(final Set<Map.Entry<String,Integer>> entries){
+    private int parseMendeley(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("mendeley")) {
@@ -233,7 +230,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseCiteUlink(final Set<Map.Entry<String,Integer>> entries){
+    private int parseCiteUlink(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("citeulink")) {
@@ -245,7 +242,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseZotero(final Set<Map.Entry<String,Integer>> entries){
+    private int parseZotero(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("zetero")) {
@@ -257,7 +254,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseF1000(final Set<Map.Entry<String,Integer>> entries){
+    private int parseF1000(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
             if (key.toLowerCase().contains("f1000")) {
@@ -269,7 +266,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseVideo(final Set<Map.Entry<String,Integer>> entries){
+    private int parseVideo(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
 //            if (key.toLowerCase().contains("video")) {
@@ -284,7 +281,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseLinkedin(final Set<Map.Entry<String,Integer>> entries){
+    private int parseLinkedin(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
 //            if (key.toLowerCase().contains("linkedin")) {
@@ -299,7 +296,7 @@ public class NatureMetricsWebPage extends WebPage {
         return 0;
     }
 
-    private int parseQ_A(final Set<Map.Entry<String,Integer>> entries){
+    private int parseQ_A(final Set<Map.Entry<String, Integer>> entries) {
         for (Map.Entry<String, Integer> entry : entries) {
             String key = entry.getKey();
 //            if (key.toLowerCase().contains("q&a")) {
