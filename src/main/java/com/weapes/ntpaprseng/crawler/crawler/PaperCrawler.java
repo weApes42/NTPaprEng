@@ -1,5 +1,6 @@
 package com.weapes.ntpaprseng.crawler.crawler;
 
+import com.weapes.ntpaprseng.crawler.util.DateHelper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
 import org.slf4j.Logger;
 
@@ -27,9 +28,9 @@ class PaperCrawler implements Crawler {
 
     @Override
     public void crawl() {
-        Helper.crawlStartDate = Helper.getCrawlTime();
-        Helper.crawlStartTime = System.currentTimeMillis();
-        System.out.print("开始爬取论文信息。系统时间：" + Helper.crawlStartDate + "\n");
+        DateHelper.setCrawlStartDate(DateHelper.getCrawlTime());
+        DateHelper.setCrawlStartTimeMills(System.currentTimeMillis());
+        System.out.print("开始爬取论文信息。系统时间：" + DateHelper.getCrawlStartDate() + "\n");
 
         // 获取上次爬取的最后一篇论文URL
         Helper.initLastUrlForLastTime();

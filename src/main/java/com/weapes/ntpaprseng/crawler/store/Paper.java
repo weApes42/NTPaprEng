@@ -1,61 +1,43 @@
 package com.weapes.ntpaprseng.crawler.store;
 
-import com.weapes.ntpaprseng.crawler.log.DBLog;
 import com.weapes.ntpaprseng.crawler.log.Log;
-import com.weapes.ntpaprseng.crawler.search.ESClient;
-import com.weapes.ntpaprseng.crawler.util.SQLHelper;
-import com.weapes.ntpaprseng.crawler.util.FormatHelper;
+import com.weapes.ntpaprseng.crawler.mapper.LogMapper;
+import com.weapes.ntpaprseng.crawler.mapper.PaperMapper;
+import com.weapes.ntpaprseng.crawler.util.DateHelper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
-import com.weapes.ntpaprseng.crawler.util.TimeFormatter;
-import com.zaxxer.hikari.HikariDataSource;
-import org.elasticsearch.common.xcontent.XContentBuilder;
+import com.weapes.ntpaprseng.crawler.util.SQLHelper;
+import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.List;
-
-import static com.weapes.ntpaprseng.crawler.log.Log.*;
-import static com.weapes.ntpaprseng.crawler.util.Helper.*;
-import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
+import static com.weapes.ntpaprseng.crawler.util.Helper.getLogger;
 
 public class Paper implements Storable {
 
-    private static final Logger LOGGER =
-            getLogger(Paper.class);
-
-    private static final String NT_PAPERS_INSERT_SQL = SQLHelper.getNtPapersInsertSQL();
-
-
-    final String REF_INSERT_SQL = SQLHelper.getRefInsertSQL();
-
-
-    private final List<String> authors;
-
-    private final String url;
-    private final String title;
-    private final String sourceTitle;
-    private final String ISSN;
-    private final String eISSN;
-    private final String DOI;
-    private final int volum;
-    private final int issue;
-    private final int pageBegin;
-    private final int pageEnd;
-    private final String affiliation;
-    private final String publishTime;
-    private final String crawlTime;
+    private static final Logger LOGGER = getLogger(Paper.class);
+    private static final SqlSession sqlSession = SQLHelper.getSqlSession();
+    private String authors;
+    private String url;
+    private String title;
+    private String sourceTitle;
+    private String issn;
+    private String eissn;
+    private String doi;
+    private int volume;
+    private int issue;
+    private int pageBegin;
+    private int pageEnd;
+    private String affiliation;
+    private String publishTime;
+    private String crawlTime;
 
     public Paper(final String url,
-                 final List<String> authors,
+                 final String authors,
                  final String title,
                  final String sourceTitle,
-                 final String ISSN,
-                 final String eISSN,
-                 final String DOI,
-                 final int volum,
+                 final String issn,
+                 final String eissn,
+                 final String doi,
+                 final int volume,
                  final int issue,
                  final int pageBegin,
                  final int pageEnd,
@@ -66,10 +48,10 @@ public class Paper implements Storable {
         this.authors = authors;
         this.title = title;
         this.sourceTitle = sourceTitle;
-        this.ISSN = ISSN;
-        this.eISSN = eISSN;
-        this.DOI = DOI;
-        this.volum = volum;
+        this.issn = issn;
+        this.eissn = eissn;
+        this.doi = doi;
+        this.volume = volume;
         this.issue = issue;
         this.pageBegin = pageBegin;
         this.pageEnd = pageEnd;
@@ -78,61 +60,62 @@ public class Paper implements Storable {
         this.crawlTime = crawlTime;
     }
 
-    private String getUrl() {
+    public String getUrl() {
         return url;
     }
 
-    private List<String> getAuthors() {
+    public String getAuthors() {
         return authors;
     }
 
-    private String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    private String getSourceTitle() {
+    public String getSourceTitle() {
         return sourceTitle;
     }
 
-    private String getISSN() {
-        return ISSN;
+    public String getIssn() {
+        return issn;
     }
 
-    private String geteISSN() {
-        return eISSN;
+    public String getEissn() {
+        return eissn;
     }
 
-    private String getDOI() {
-        return DOI;
+    public String getDoi() {
+        return doi;
     }
 
-    private int getVolum() {
-        return volum;
+    public int getVolume() {
+        return volume;
     }
 
-    private int getIssue() {
+    public int getIssue() {
         return issue;
     }
 
-    private int getPageBegin() {
+    public int getPageBegin() {
         return pageBegin;
     }
 
-    private int getPageEnd() {
+    public int getPageEnd() {
         return pageEnd;
     }
 
-    private String getAffiliation() {
+    public String getAffiliation() {
         return affiliation;
     }
 
-    private String getPublishTime() {
+    public String getPublishTime() {
         return publishTime;
     }
 
-    private String getCrawlTime() {
+    public String getCrawlTime() {
         return crawlTime;
     }
+
 
     @Override
     public boolean store() {
@@ -143,196 +126,74 @@ public class Paper implements Storable {
         if (Log.getUrlNumbers().get() == Log.getCrawlingNumbers().get()) { //记录最后一篇论文链接
             Log.setLastLink(getUrl());
         }
+        LOGGER.info("保存爬取的数据: type=Paper");
+        PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
+        boolean isSucceed = paperMapper.savePaper(this);
+        if (isSucceed) {
+            LOGGER.info("当前共有" + Log.getCrawlingSucceedNumbers().incrementAndGet() + "篇爬取成功..."
+                    + "url=" + getUrl());
+        } else {
+            LOGGER.error("当前共有" + Log.getCrawlingFailedNumber().incrementAndGet() + "篇爬取失败..."
+                    + "url=" + getUrl());
+        }
+        MetricsPaper metricsPaper = new MetricsPaper()
+                .setUrl(getUrl())
+                .setUpdateTime(DateHelper.getUpdateTime());
+        isSucceed = paperMapper.saveMetricsPaper(metricsPaper);//初始化PaperMetrics
+        if (isSucceed) {
+            LOGGER.info("url=" + getUrl() + "的PaperMetrics初始化成功");
+        } else {
+            LOGGER.error("url=" + getUrl() + "的PaperMetrics初始化失败");
+        }
 
+//        isSucceed = ESClient.getInstance().savePaperIntoES(this);//保存论文信息到ES中
+//        if (isSucceed) {
+//            LOGGER.info("保存论文信息到ElasticSearch中的PAPER成功");
+//        } else {
+//            LOGGER.error("保存论文信息到ElasticSearch中的PAPER失败");
+//        }
+        //保存论文爬取详细日志
+        LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
+        isSucceed = logMapper.saveCrawlDetailLog(getUrl(),
+                Log.getCrawlingNumbers().get(),
+                Log.getUrlNumbers().get(),
+                isSucceed,
+                DateHelper.getCrawlTime());
+        if (isSucceed) {
+            LOGGER.info("爬取过程具体日志保存成功");
+        } else {
+            LOGGER.error("爬取过程具体日志保存失败");
+        }
+        //爬取完成，打印、保存日志和更新任务状态
+        if (Log.getLastLink().equals(getUrl())) {
+            LOGGER.info("爬取完成，本次爬取论文总量：" + Log.getUrlNumbers().get()
+                    + " 成功数：" + Log.getCrawlingSucceedNumbers().get()
+                    + " 失败数：" + Log.getCrawlingFailedNumber().get());
 
-        System.out.println("保存爬取的数据: type=Paper");
-        final HikariDataSource mysqlDataSource =
-                DataSource.getMysqlDataSource();
-
-        // 从DB连接池得到连接
-        try (final Connection connection = mysqlDataSource.getConnection()) {
-            boolean isSucceed = true;
-            try {
-                final PreparedStatement paperPreparedStatement =
-                        connection.prepareStatement(NT_PAPERS_INSERT_SQL);
-                bindPaperSQL(paperPreparedStatement);
-                System.out.println("执行保存数据的sql语句");
-                // 判断爬取论文信息操作是否成功
-                isSucceed = paperPreparedStatement.executeUpdate() != 0;
-            } catch (SQLException e) {
-                System.out.print(e.getSQLState() + "  " + e.getMessage());
-            }
-
-//            isSucceed = putNTPaperIntoES();//保存论文信息到ES中
-//            if (!isSucceed) {
-//                System.out.println("保存论文信息到ElasticSearch中的NT_PAPER失败");
-//            }
-
-            try {//初始化REF_DATA
-                final PreparedStatement refPreparedStatement =
-                        connection.prepareStatement(REF_INSERT_SQL);
-                bindRefSQL(refPreparedStatement);
-                System.out.println("保存论文URL到REF_DATA");
-                refPreparedStatement.executeUpdate();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
+            long endTime = System.currentTimeMillis();//结束爬取的时间
+            String averageTime = DateHelper.getSeconds((endTime - DateHelper.getCrawlStartTimeMills()) / Log.getUrlNumbers().get());
+            //保存爬取完成的总体情况日志到数据库中
+            isSucceed = logMapper.saveCrawlTotalLog(1, DateHelper.getCrawlStartDate(), Log.getCrawlingSucceedNumbers().get(),
+                    Log.getCrawlingFailedNumber().get(), Log.getUrlNumbers().get(), averageTime);
             if (isSucceed) {
-                LOGGER.info("当前共有" + getCrawlingSucceedNumbers().incrementAndGet() + "篇爬取成功..."
-                        + "url=" + getUrl());
+                LOGGER.info("爬取过程总体日志保存成功");
             } else {
-                LOGGER.info("当前共有" + getCrawlingFailedNumber().incrementAndGet() + "篇爬取失败..."
-                        + "url=" + getUrl());
+                LOGGER.error("爬取过程总体日志保存失败");
             }
-
-            //保存论文爬取详细日志
-            DBLog.saveCrawlDetailLog(getUrl(),
-                    Log.getCrawlingNumbers().get(),
-                    Log.getUrlNumbers().get(),
-                    isSucceed,
-                    Helper.getCrawlTime());
-
-            //爬取完成，打印、保存日志和更新任务状态
-            if (getLastLink().equals(getUrl())) {
-                LOGGER.info("爬取完成，本次爬取论文总量：" + getUrlNumbers().get()
-                        + " 成功数：" + getCrawlingSucceedNumbers().get()
-                        + " 失败数：" + getCrawlingFailedNumber().get());
-
-                long endTime = System.currentTimeMillis();//结束爬取的时间
-                String averageTime = Helper.getSeconds((endTime - Helper.crawlStartTime) / getUrlNumbers().get());
-                //保存爬取完成的总体情况日志到数据库中
-                DBLog.saveFinalCrawlLog(Helper.crawlStartDate, getCrawlingSucceedNumbers().get(),
-                        getCrawlingFailedNumber().get(), getUrlNumbers().get(), averageTime);
-
-                Helper.isFirstUrl = true; //下次任务开始时有第一条论文url
-                Helper.isCrawlFinished = true; //爬取任务结束
-                getCrawlingSucceedNumbers().set(0);
-                getCrawlingFailedNumber().set(0);
-                Log.getCrawlingNumbers().set(0);
-                Helper.firstInsertCrawlDetailLog = true;
-                getUrlNumbers().set(0); //重置爬取论文总量
-            }
-            return isSucceed;
-        } catch (SQLException e) {
-            e.printStackTrace();
+            Helper.isFirstUrl = true; //下次任务开始时有第一条论文url
+            Helper.isCrawlFinished = true; //爬取任务结束
+            Log.getCrawlingSucceedNumbers().set(0);
+            Log.getCrawlingFailedNumber().set(0);
+            Log.getCrawlingNumbers().set(0);
+            Helper.firstInsertCrawlDetailLog = true;
+            Log.getUrlNumbers().set(0); //重置爬取论文总量
         }
-        return false;
-    }
-
-    private void bindPaperSQL(final PreparedStatement preparedStatement)
-            throws SQLException {
-        preparedStatement.setString(1, getTitle());
-        preparedStatement.setString(2, String.join(",", getAuthors()));
-        preparedStatement.setString(3, getSourceTitle());
-        preparedStatement.setString(4, getISSN());
-        preparedStatement.setString(5, geteISSN());
-        preparedStatement.setString(6, getDOI());
-        preparedStatement.setInt(7, getVolum());
-        preparedStatement.setInt(8, getIssue());
-        preparedStatement.setInt(9, getPageBegin());
-        preparedStatement.setInt(10, getPageEnd());
-        preparedStatement.setString(11, getUrl());
-        preparedStatement.setString(12, getAffiliation());
-        preparedStatement.setString(13, getCrawlTime());
-        preparedStatement.setString(14, getPublishTime());
-    }
-
-    private boolean putNTPaperIntoES() {
-        XContentBuilder json = null;
-        FormatHelper formatHelper=new FormatHelper();
-        TimeFormatter formatter=formatHelper.formatPublishTime(getPublishTime());
-        try {
-            json = jsonBuilder().startObject()
-                    .field("URL", getUrl())
-                    .field("Title", getTitle())
-                    .field("Authors", getAuthors())
-                    .field("SourceTitle", getSourceTitle())
-                    .field("ISSN", geteISSN())
-                    .field("EISSN", geteISSN())
-                    .field("DOI", getDOI())
-                    .field("Volum", getVolum())
-                    .field("Issue", getIssue())
-                    .field("PageBegin", getPageBegin())
-                    .field("PageEnd", getPageEnd())
-                    .field("Affiliation", getAffiliation())
-                    .field("CrawlTime", getCrawlTime())
-                    .field("Year", formatter.getYear())
-                    .field("Month", formatter.getMonth())
-                    .field("Day", formatter.getDay())
-                    .field("PublishTime", getPublishTime()).endObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return ESClient.getInstance().putPaperIntoES(getUrl(), json);
-    }
-
-    public void bindRefSQL(final PreparedStatement preparedStatement)
-            throws SQLException {
-        preparedStatement.setString(1, getMetricsUrl());
-        preparedStatement.setString(2, Helper.getUpdateTime());
-        preparedStatement.setInt(3, 0);
-        preparedStatement.setInt(4, 0);
-        preparedStatement.setInt(5, 0);
-        preparedStatement.setInt(6, 0);
-        preparedStatement.setInt(7, 0);
-        preparedStatement.setInt(8, 0);
-        preparedStatement.setInt(9, 0);
-        preparedStatement.setInt(10, 0);
-        preparedStatement.setInt(11, 0);
-        preparedStatement.setInt(12, 0);
-        preparedStatement.setInt(13, 0);
-        preparedStatement.setInt(14, 0);
-        preparedStatement.setInt(15, 0);
-        preparedStatement.setInt(16, 0);
-        preparedStatement.setInt(17, 0);
-        preparedStatement.setInt(18, 0);
-        preparedStatement.setInt(19, 0);
-        preparedStatement.setInt(20, 0);
-        preparedStatement.setInt(21, 0);
-        preparedStatement.setInt(22, 0);
-    }
-
-    private boolean putRefDataIntoES() {
-        XContentBuilder json = null;
-        FormatHelper formatHelper=new FormatHelper();
-        TimeFormatter formatter=formatHelper.formatUpdateTime(Helper.getUpdateTime());
-        try {
-            json = jsonBuilder().startObject()
-                    .field("URL", getMetricsUrl())
-                    .field("UpdateTime", Helper.getUpdateTime())
-                    .field("Year", formatter.getYear())
-                    .field("Month", formatter.getMonth())
-                    .field("Day", formatter.getDay())
-                    .field("Page_views", 0)
-                    .field("Web_Of_Science", 0)
-                    .field("CrossRef", 0)
-                    .field("Scopus", 0)
-                    .field("News_outlets", 0)
-                    .field("Reddit", 0)
-                    .field("Blog", 0)
-                    .field("Tweets", 0)
-                    .field("FaceBook", 0)
-                    .field("Google", 0)
-                    .field("Pinterest", 0)
-                    .field("Wikipedia", 0)
-                    .field("Mendeley", 0)
-                    .field("CiteUlink", 0)
-                    .field("Zotero", 0)
-                    .field("F10000", 0)
-                    .field("Video", 0)
-                    .field("Linkedin", 0)
-                    .field("Q_A", 0)
-                    .field("FinalIndex", 0)
-                    .endObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return ESClient.getInstance().putMetricsPaperIntoES(json);
+        sqlSession.commit();
+        return isSucceed;
     }
 
     // 将原来的论文详细页面url进行字符串处理，转化为metric相关指标页面url
-    private String getMetricsUrl() {
+    public String getMetricsUrl() {
         int index1 = getUrl().indexOf("/full");
         String subString = getUrl().substring(0, index1);
         String subString1 = getUrl().substring(index1);

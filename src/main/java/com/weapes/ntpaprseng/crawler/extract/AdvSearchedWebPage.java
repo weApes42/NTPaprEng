@@ -4,16 +4,14 @@ import com.weapes.ntpaprseng.crawler.follow.AdvSearchedLink;
 import com.weapes.ntpaprseng.crawler.follow.Link;
 import com.weapes.ntpaprseng.crawler.follow.PaperLink;
 import com.weapes.ntpaprseng.crawler.log.Log;
-import com.weapes.ntpaprseng.crawler.store.DataSource;
+import com.weapes.ntpaprseng.crawler.mapper.UtilMapper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
-import com.zaxxer.hikari.HikariDataSource;
+import com.weapes.ntpaprseng.crawler.util.SQLHelper;
+import org.apache.ibatis.session.SqlSession;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,7 +19,7 @@ import java.util.stream.Collectors;
 public class AdvSearchedWebPage extends WebPage {
 
     private static final String LAST_URL_UPDATE_SQL =
-            "UPDATE HELPER SET "+" last_url = ? "+ "WHERE id = 1";
+            "UPDATE Helper SET "+" lastUrl = ? "+ "WHERE id = 1";
 
     // 每页论文数量
     private static final int NUM_OF_PAPERS_PER_PAGE = 25;
@@ -59,7 +57,6 @@ public class AdvSearchedWebPage extends WebPage {
         final List<? extends Link> paperLinks =
                 getPaperLinks(parsePaperLinks(dom));
         allLinks.addAll(paperLinks);
-
         Helper.advSearchLinkNum--; //高级检索后的页面数递减
         return allLinks;
     }
@@ -88,19 +85,12 @@ public class AdvSearchedWebPage extends WebPage {
     }
 
     private static void saveFirstUrl(String url) {
-        if (Helper.isFirstUrl) {//如果是第一篇论文，则更新论文链接到表HELPER中的last_url字段
-            boolean isSucceed = false;
-            final HikariDataSource mysqlDataSource = DataSource.getMysqlDataSource();
-            try (final Connection connection = mysqlDataSource.getConnection()){
-                try (final PreparedStatement preparedStatement = connection.prepareStatement(LAST_URL_UPDATE_SQL)) {
-                    preparedStatement.setString(1, url);
-                    isSucceed = preparedStatement.executeUpdate() != 0;
-                }catch (SQLException e){
-                    e.printStackTrace();
-                }
-            }catch (SQLException e){
-                e.printStackTrace();
-            }
+        if (Helper.isFirstUrl) {//如果是第一篇论文，则更新论文链接到表Helper中的lastUrl字段
+            SqlSession sqlSession= SQLHelper.getSqlSession();
+            UtilMapper utilMapper=sqlSession.getMapper(UtilMapper.class);
+            boolean isSucceed = utilMapper.updateLastUrl(url);
+            sqlSession.commit();
+            sqlSession.close();
             if (isSucceed) {//成功之后就更改isFirstUrl为false 即后面的论文都不是第一篇了
                 Helper.isFirstUrl = false;
             }
