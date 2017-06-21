@@ -2,15 +2,15 @@ package com.weapes.ntpaprseng.crawler.extract;
 
 import com.weapes.ntpaprseng.crawler.store.Paper;
 import com.weapes.ntpaprseng.crawler.store.Storable;
+import com.weapes.ntpaprseng.crawler.util.DateHelper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.weapes.ntpaprseng.crawler.util.Helper.getCrawlTime;
+
 
 public class PaperWebPage extends WebPage {
 
@@ -27,7 +27,7 @@ public class PaperWebPage extends WebPage {
             "#footer > div > dl > dd.eissn";
     private static final String DOI_CSS_SELECTOR =
             "article > header > dl > dd.doi";
-    private static final String VOLUM_CSS_SELECTOR =
+    private static final String VOLUME_CSS_SELECTOR =
             "#sub-navigation > li.parent.parent-2 > a";
     private static final String ISSUE_CSS_SELECTOR =
             "#sub-navigation > li.parent.parent-3 > a";
@@ -43,7 +43,7 @@ public class PaperWebPage extends WebPage {
     private static final int ISSN_TEXT_OFFSET = 6;
     private static final int EISSN_TEXT_OFFSET = 7;
     private static final int DOI_TEXT_OFFSET = 4;
-    private static final int VOLUM_TEXT_OFFSET = 7;
+    private static final int VOLUME_TEXT_OFFSET = 7;
     private static final int ISSUE_TEXT_OFFSET = 6;
 
 
@@ -70,7 +70,7 @@ public class PaperWebPage extends WebPage {
                 parsePageEnd(dom),
                 parseAffiliation(dom),
                 parsePublishTime(dom),
-                getCrawlTime()
+                DateHelper.getCrawlTime()
         );
     }
 
@@ -79,12 +79,13 @@ public class PaperWebPage extends WebPage {
         return null;
     }
 
-    private List<String> parseAuthors(final Document dom) {
+    private String parseAuthors(final Document dom) {
         final Elements authorsDOM = dom.select(AUTHOR_CSS_SELECTOR);
-        return authorsDOM
+        List<String> authors = authorsDOM
                 .stream()
                 .map(Element::text)
                 .collect(Collectors.toList());
+        return String.join(",",authors);
     }
 
     private String parseTitle(final Document dom) {
@@ -123,10 +124,10 @@ public class PaperWebPage extends WebPage {
 
     private int parseVolum(final Document dom) {
 
-        final Elements volum = dom.select(VOLUM_CSS_SELECTOR);
+        final Elements volum = dom.select(VOLUME_CSS_SELECTOR);
 
         try {
-            return Integer.parseInt(volum.text().substring(VOLUM_TEXT_OFFSET));
+            return Integer.parseInt(volum.text().substring(VOLUME_TEXT_OFFSET));
         } catch (Exception e) {
             return 0;
         }

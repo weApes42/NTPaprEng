@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weapes.ntpaprseng.crawler.mapper.PaperMapper">
+
+    <insert id="savePaper">
+        INSERT INTO Paper(url, title, authors, sourceTitle, issn, eissn, doi,
+        volume, issue, pageBegin, pageEnd, affiliation, publishTime, crawlTime)
+         VALUES(#{url},#{title},#{authors},#{sourceTitle},#{issn},#{eissn},
+         #{doi},#{volume},#{issue},#{pageBegin},#{pageEnd},#{affiliation},
+         #{publishTime},#{crawlTime})
+    </insert>
+    <insert id="saveMetricsPaper">
+        INSERT INTO PaperMetrics(url, updateTime, pageViews, webOfScience, crossRef,
+         scopus, newsOutlets, reddit, blog, tweets, facebook, google, pinterest,
+          wikipedia, mendeley, citeUlink, zotero, f1000, video, linkedin, q_a, finalIndex)
+        VALUES(#{url},#{updateTime},#{pageViews},#{webOfScience},#{crossRef},#{scopus},
+        #{newsOutlets},#{reddit},#{blog},#{tweets},#{facebook},#{google},#{pinterest},
+        #{wikipedia},#{mendeley},#{citeUlink},#{zotero},#{f1000},#{video},#{linkedin},
+        #{q_a},#{finalIndex})
+    </insert>
+</mapper>
