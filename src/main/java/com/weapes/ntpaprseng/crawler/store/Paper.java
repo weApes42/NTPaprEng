@@ -31,6 +31,9 @@ public class Paper implements Storable {
     private String publishTime;
     private String crawlTime;
 
+    public Paper(){
+
+    }
     public Paper(final String url,
                  final String authors,
                  final String title,
@@ -58,6 +61,62 @@ public class Paper implements Storable {
         this.pageEnd = pageEnd;
         this.affiliation = affiliation;
         this.publishTime = publishTime;
+        this.crawlTime = crawlTime;
+    }
+
+    public void setAuthors(String authors) {
+        this.authors = authors;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setSourceTitle(String sourceTitle) {
+        this.sourceTitle = sourceTitle;
+    }
+
+    public void setIssn(String issn) {
+        this.issn = issn;
+    }
+
+    public void setEissn(String eissn) {
+        this.eissn = eissn;
+    }
+
+    public void setDoi(String doi) {
+        this.doi = doi;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    public void setIssue(int issue) {
+        this.issue = issue;
+    }
+
+    public void setPageBegin(int pageBegin) {
+        this.pageBegin = pageBegin;
+    }
+
+    public void setPageEnd(int pageEnd) {
+        this.pageEnd = pageEnd;
+    }
+
+    public void setAffiliation(String affiliation) {
+        this.affiliation = affiliation;
+    }
+
+    public void setPublishTime(String publishTime) {
+        this.publishTime = publishTime;
+    }
+
+    public void setCrawlTime(String crawlTime) {
         this.crawlTime = crawlTime;
     }
 
@@ -130,6 +189,7 @@ public class Paper implements Storable {
         LOGGER.info("保存爬取的数据: type=Paper");
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
         boolean isSucceed = paperMapper.savePaper(this);
+        sqlSession.commit();
         if (isSucceed) {
             LOGGER.info("当前共有" + Log.getCrawlingSucceedNumbers().incrementAndGet() + "篇爬取成功..."
                     + "url=" + getUrl());
@@ -148,12 +208,11 @@ public class Paper implements Storable {
         }
 
         isSucceed = ESClient.getInstance().savePaperIntoES(this);//保存论文信息到ES中
-        if (!isSucceed) {
+        if (isSucceed) {
             LOGGER.info("保存论文信息到ElasticSearch中的PAPER成功");
-            throw new NullPointerException("保存论文信息到ElasticSearch中的PAPER失败");
         } else {
-            LOGGER.error("保存论文信息到ElasticSearch中的PAPER失败");
-          //  throw new NullPointerException("保存论文信息到ElasticSearch中的PAPER失败");
+            System.err.println("保存论文信息到ElasticSearch中的PAPER失败");
+
         }
         //保存论文爬取详细日志
         LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
@@ -165,7 +224,7 @@ public class Paper implements Storable {
         if (isSucceed) {
             LOGGER.info("爬取过程具体日志保存成功");
         } else {
-            LOGGER.error("爬取过程具体日志保存失败");
+            System.err.print("爬取过程具体日志保存失败");
         }
         //爬取完成，打印、保存日志和更新任务状态
         if (Log.getLastLink().equals(getUrl())) {
@@ -181,7 +240,7 @@ public class Paper implements Storable {
             if (isSucceed) {
                 LOGGER.info("爬取过程总体日志保存成功");
             } else {
-                LOGGER.error("爬取过程总体日志保存失败");
+                System.err.print("爬取过程总体日志保存失败");
             }
             Helper.isFirstUrl = true; //下次任务开始时有第一条论文url
             Helper.isCrawlFinished = true; //爬取任务结束
@@ -204,4 +263,14 @@ public class Paper implements Storable {
         String subString2 = subString1.substring(5, index2);
         return subString + subString2 + "/metrics";
     }
+//    public void save(){
+//        SqlSession sqlSession= SqlHelper.getSqlSession();
+//        PaperMapper paperMapper=sqlSession.getMapper(PaperMapper.class);
+//        this.setUrl("www.baidu.com");
+//        paperMapper.savePaper(this);
+//        sqlSession.commit();
+//    }
+//    public static void main(String[]args){
+//        new Paper().save();
+//    }
 }

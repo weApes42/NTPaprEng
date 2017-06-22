@@ -3,6 +3,7 @@ package com.weapes.ntpaprseng.crawler.store;
 import com.weapes.ntpaprseng.crawler.log.Log;
 import com.weapes.ntpaprseng.crawler.mapper.LogMapper;
 import com.weapes.ntpaprseng.crawler.mapper.PaperMapper;
+import com.weapes.ntpaprseng.crawler.search.ESClient;
 import com.weapes.ntpaprseng.crawler.util.DateHelper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
 import com.weapes.ntpaprseng.crawler.util.SqlHelper;
@@ -191,7 +192,7 @@ public class MetricsPaper implements Storable {
         LOGGER.info("本次更新论文" + Log.getUpdateTotalNumbers().get() + "篇，"
                 + "正在更新第" + Log.getCurrentUpdateNumbers().incrementAndGet() + "篇\n"
                 + "链接为：" + getUrl());
-        LOGGER.error("*********************"+toString()+"*******************");
+        System.err.println("*********************"+toString()+"*******************");
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
         boolean succeed = paperMapper.saveMetricsPaper(this);
         LOGGER.info("保存爬取的数据: type = MetricsPaper.");
@@ -202,12 +203,12 @@ public class MetricsPaper implements Storable {
             LOGGER.error("当前共有" + getUpdateFailedNumbers().incrementAndGet() + "篇论文相关指标更新失败..."
                     + "链接为:" + getUrl());
         }
-//        boolean isSuccess = ESClient.getInstance().updateMetricsPaperIntoES(this);//更新论文指标到ElasticSearch中的REF_DATA
-//        if (isSuccess) {
-//            LOGGER.info("更新论文指标到ElasticSearch中的METRICS_PAPER成功");
-//        } else {
-//            LOGGER.error("更新论文指标到ElasticSearch中的METRICS_PAPER失败");
-//        }
+        boolean isSuccess = ESClient.getInstance().updateMetricsPaperIntoES(this);//更新论文指标到ElasticSearch中的REF_DATA
+        if (isSuccess) {
+            LOGGER.info("更新论文指标到ElasticSearch中的METRICS_PAPER成功");
+        } else {
+            System.err.println("更新论文指标到ElasticSearch中的METRICS_PAPER失败");
+        }
         //保存更新的具体日志数据到数据库中
         LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
         succeed = logMapper.saveUpdateDetailLog(getUrl(),

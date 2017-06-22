@@ -68,7 +68,7 @@ public class AdvSearchedWebPage extends WebPage {
         // 利用上次爬取的最后一篇论文链接来遍历对比本次爬取一定范围内的所有链接，
         // 来确定本次需要爬取得论文链接，当匹配到上次爬取最后一篇论文链接则说明后面的就是上次已经爬取过的，即检查完毕
         String lastUrlForLastTime = Helper.lastUrlForLastTime;
-        if (lastUrlForLastTime == null || lastUrlForLastTime.equals("")){
+        if (lastUrlForLastTime == null || lastUrlForLastTime.length() == 0){
             Log.getUrlNumbers().addAndGet(1);
             return true;
         }
