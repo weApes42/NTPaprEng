@@ -3,9 +3,10 @@ package com.weapes.ntpaprseng.crawler.store;
 import com.weapes.ntpaprseng.crawler.log.Log;
 import com.weapes.ntpaprseng.crawler.mapper.LogMapper;
 import com.weapes.ntpaprseng.crawler.mapper.PaperMapper;
+import com.weapes.ntpaprseng.crawler.search.ESClient;
 import com.weapes.ntpaprseng.crawler.util.DateHelper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
-import com.weapes.ntpaprseng.crawler.util.SQLHelper;
+import com.weapes.ntpaprseng.crawler.util.SqlHelper;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 
@@ -14,7 +15,7 @@ import static com.weapes.ntpaprseng.crawler.util.Helper.getLogger;
 public class Paper implements Storable {
 
     private static final Logger LOGGER = getLogger(Paper.class);
-    private static final SqlSession sqlSession = SQLHelper.getSqlSession();
+    private static final SqlSession sqlSession = SqlHelper.getSqlSession();
     private String authors;
     private String url;
     private String title;
@@ -137,7 +138,7 @@ public class Paper implements Storable {
                     + "url=" + getUrl());
         }
         MetricsPaper metricsPaper = new MetricsPaper()
-                .setUrl(getUrl())
+                .setUrl(getMetricsUrl())
                 .setUpdateTime(DateHelper.getUpdateTime());
         isSucceed = paperMapper.saveMetricsPaper(metricsPaper);//初始化PaperMetrics
         if (isSucceed) {
@@ -146,12 +147,14 @@ public class Paper implements Storable {
             LOGGER.error("url=" + getUrl() + "的PaperMetrics初始化失败");
         }
 
-//        isSucceed = ESClient.getInstance().savePaperIntoES(this);//保存论文信息到ES中
-//        if (isSucceed) {
-//            LOGGER.info("保存论文信息到ElasticSearch中的PAPER成功");
-//        } else {
-//            LOGGER.error("保存论文信息到ElasticSearch中的PAPER失败");
-//        }
+        isSucceed = ESClient.getInstance().savePaperIntoES(this);//保存论文信息到ES中
+        if (!isSucceed) {
+            LOGGER.info("保存论文信息到ElasticSearch中的PAPER成功");
+            throw new NullPointerException("保存论文信息到ElasticSearch中的PAPER失败");
+        } else {
+            LOGGER.error("保存论文信息到ElasticSearch中的PAPER失败");
+          //  throw new NullPointerException("保存论文信息到ElasticSearch中的PAPER失败");
+        }
         //保存论文爬取详细日志
         LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
         isSucceed = logMapper.saveCrawlDetailLog(getUrl(),

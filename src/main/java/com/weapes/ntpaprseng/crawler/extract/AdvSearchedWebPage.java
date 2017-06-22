@@ -6,7 +6,7 @@ import com.weapes.ntpaprseng.crawler.follow.PaperLink;
 import com.weapes.ntpaprseng.crawler.log.Log;
 import com.weapes.ntpaprseng.crawler.mapper.UtilMapper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
-import com.weapes.ntpaprseng.crawler.util.SQLHelper;
+import com.weapes.ntpaprseng.crawler.util.SqlHelper;
 import org.apache.ibatis.session.SqlSession;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -86,7 +86,7 @@ public class AdvSearchedWebPage extends WebPage {
 
     private static void saveFirstUrl(String url) {
         if (Helper.isFirstUrl) {//如果是第一篇论文，则更新论文链接到表Helper中的lastUrl字段
-            SqlSession sqlSession= SQLHelper.getSqlSession();
+            SqlSession sqlSession= SqlHelper.getSqlSession();
             UtilMapper utilMapper=sqlSession.getMapper(UtilMapper.class);
             boolean isSucceed = utilMapper.updateLastUrl(url);
             sqlSession.commit();

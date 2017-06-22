@@ -5,7 +5,7 @@ import com.weapes.ntpaprseng.crawler.mapper.LogMapper;
 import com.weapes.ntpaprseng.crawler.mapper.PaperMapper;
 import com.weapes.ntpaprseng.crawler.util.DateHelper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
-import com.weapes.ntpaprseng.crawler.util.SQLHelper;
+import com.weapes.ntpaprseng.crawler.util.SqlHelper;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 
@@ -17,7 +17,7 @@ public class MetricsPaper implements Storable {
 
     private static final Logger LOGGER =
             getLogger(Paper.class);
-    private static final SqlSession sqlSession= SQLHelper.getSqlSession();
+    private static final SqlSession sqlSession= SqlHelper.getSqlSession();
     private String url;
     private int pageViews;
     private int webOfScience;
@@ -88,197 +88,9 @@ public class MetricsPaper implements Storable {
     public MetricsPaper() {
     }
 
-    public String getUrl() {
-        return url;
-    }
-
     public MetricsPaper setUrl(String url) {
         this.url = url;
         return this;
-    }
-
-    public int getPageViews() {
-        return pageViews;
-    }
-
-    public MetricsPaper setPageViews(int pageViews) {
-        this.pageViews = pageViews;
-        return this;
-    }
-
-    public int getWebOfScience() {
-        return webOfScience;
-    }
-
-    public MetricsPaper setWebOfScience(int webOfScience) {
-        this.webOfScience = webOfScience;
-        return this;
-    }
-
-    public int getCrossRef() {
-        return crossRef;
-    }
-
-    public MetricsPaper setCrossRef(int crossRef) {
-        this.crossRef = crossRef;
-        return this;
-    }
-
-    public int getScopus() {
-        return scopus;
-    }
-
-    public MetricsPaper setScopus(int scopus) {
-        this.scopus = scopus;
-        return this;
-    }
-
-    public int getNewsOutlets() {
-        return newsOutlets;
-    }
-
-    public MetricsPaper setNewsOutlets(int newsOutlets) {
-        this.newsOutlets = newsOutlets;
-        return this;
-    }
-
-    public int getReddit() {
-        return reddit;
-    }
-
-    public MetricsPaper setReddit(int reddit) {
-        this.reddit = reddit;
-        return this;
-    }
-
-    public int getBlog() {
-        return blog;
-    }
-
-    public MetricsPaper setBlog(int blog) {
-        this.blog = blog;
-        return this;
-    }
-
-    public int getTweets() {
-        return tweets;
-    }
-
-    public MetricsPaper setTweets(int tweets) {
-        this.tweets = tweets;
-        return this;
-    }
-
-    public int getFacebook() {
-        return facebook;
-    }
-
-    public MetricsPaper setFacebook(int facebook) {
-        this.facebook = facebook;
-        return this;
-    }
-
-    public int getGoogle() {
-        return google;
-    }
-
-    public MetricsPaper setGoogle(int google) {
-        this.google = google;
-        return this;
-    }
-
-    public int getPinterest() {
-        return pinterest;
-    }
-
-    public MetricsPaper setPinterest(int pinterest) {
-        this.pinterest = pinterest;
-        return this;
-    }
-
-    public int getWikipedia() {
-        return wikipedia;
-    }
-
-    public MetricsPaper setWikipedia(int wikipedia) {
-        this.wikipedia = wikipedia;
-        return this;
-    }
-
-    public int getMendeley() {
-        return mendeley;
-    }
-
-    public MetricsPaper setMendeley(int mendeley) {
-        this.mendeley = mendeley;
-        return this;
-    }
-
-    public int getCiteUlink() {
-        return citeUlink;
-    }
-
-    public MetricsPaper setCiteUlink(int citeUlink) {
-        this.citeUlink = citeUlink;
-        return this;
-    }
-
-    public int getZotero() {
-        return zotero;
-    }
-
-    public MetricsPaper setZotero(int zotero) {
-        this.zotero = zotero;
-        return this;
-    }
-
-    public int getF1000() {
-        return f1000;
-    }
-
-    public MetricsPaper setF1000(int f1000) {
-        this.f1000 = f1000;
-        return this;
-    }
-
-    public int getVideo() {
-        return video;
-    }
-
-    public MetricsPaper setVideo(int video) {
-        this.video = video;
-        return this;
-    }
-
-    public int getLinkedin() {
-        return linkedin;
-    }
-
-    public MetricsPaper setLinkedin(int linkedin) {
-        this.linkedin = linkedin;
-        return this;
-    }
-
-    public int getQ_a() {
-        return q_a;
-    }
-
-    public MetricsPaper setQ_a(int q_a) {
-        this.q_a = q_a;
-        return this;
-    }
-
-    public int getFinalIndex() {
-        return finalIndex;
-    }
-
-    public MetricsPaper setFinalIndex(int finalIndex) {
-        this.finalIndex = finalIndex;
-        return this;
-    }
-
-    public String getUpdateTime() {
-        return updateTime;
     }
 
     public MetricsPaper setUpdateTime(String updateTime) {
@@ -286,14 +98,103 @@ public class MetricsPaper implements Storable {
         return this;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public int getPageViews() {
+        return pageViews;
+    }
+
+    public int getWebOfScience() {
+        return webOfScience;
+    }
+
+    public int getCrossRef() {
+        return crossRef;
+    }
+
+    public int getScopus() {
+        return scopus;
+    }
+
+    public int getNewsOutlets() {
+        return newsOutlets;
+    }
+
+    public int getReddit() {
+        return reddit;
+    }
+
+    public int getBlog() {
+        return blog;
+    }
+
+    public int getTweets() {
+        return tweets;
+    }
+
+    public int getFacebook() {
+        return facebook;
+    }
+
+    public int getGoogle() {
+        return google;
+    }
+
+    public int getPinterest() {
+        return pinterest;
+    }
+
+    public int getWikipedia() {
+        return wikipedia;
+    }
+
+    public int getMendeley() {
+        return mendeley;
+    }
+
+    public int getCiteUlink() {
+        return citeUlink;
+    }
+
+    public int getZotero() {
+        return zotero;
+    }
+
+    public int getF1000() {
+        return f1000;
+    }
+
+    public int getVideo() {
+        return video;
+    }
+
+    public int getLinkedin() {
+        return linkedin;
+    }
+
+    public int getQ_a() {
+        return q_a;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public int getFinalIndex() {
+        return finalIndex;
+    }
+
     @Override
     public boolean store() {
         LOGGER.info("本次更新论文" + Log.getUpdateTotalNumbers().get() + "篇，"
                 + "正在更新第" + Log.getCurrentUpdateNumbers().incrementAndGet() + "篇\n"
                 + "链接为：" + getUrl());
+        LOGGER.error("*********************"+toString()+"*******************");
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
         boolean succeed = paperMapper.saveMetricsPaper(this);
-        System.out.println("保存爬取的数据: type = MetricsPaper.");
+        LOGGER.info("保存爬取的数据: type = MetricsPaper.");
         if (succeed) {
             LOGGER.info("当前共有" + getUpdateSucceedNumbers().incrementAndGet() + "篇论文相关指标更新成功..."
                     + "链接为:" + getUrl());
@@ -352,4 +253,31 @@ public class MetricsPaper implements Storable {
         return succeed;
     }
 
+    @Override
+    public String toString() {
+        return "MetricsPaper{" +
+                "url='" + url + '\'' +
+                ", pageViews=" + pageViews +
+                ", webOfScience=" + webOfScience +
+                ", crossRef=" + crossRef +
+                ", scopus=" + scopus +
+                ", newsOutlets=" + newsOutlets +
+                ", reddit=" + reddit +
+                ", blog=" + blog +
+                ", tweets=" + tweets +
+                ", facebook=" + facebook +
+                ", google=" + google +
+                ", pinterest=" + pinterest +
+                ", wikipedia=" + wikipedia +
+                ", mendeley=" + mendeley +
+                ", citeUlink=" + citeUlink +
+                ", zotero=" + zotero +
+                ", f1000=" + f1000 +
+                ", video=" + video +
+                ", linkedin=" + linkedin +
+                ", q_a=" + q_a +
+                ", updateTime='" + updateTime + '\'' +
+                ", finalIndex=" + finalIndex +
+                '}';
+    }
 }

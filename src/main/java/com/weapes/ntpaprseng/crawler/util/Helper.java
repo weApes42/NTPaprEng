@@ -196,7 +196,7 @@ public final class Helper {
     public static List<PaperMetricsLink> loadMetricsLinks() {
         List<PaperMetricsLink> paperMetricsLinks = new ArrayList<>();
         //从第二张数据表中取出已有所有论文相关指标页面链接
-        SqlSession sqlSession = SQLHelper.getSqlSession();
+        SqlSession sqlSession = SqlHelper.getSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
         utilMapper.listPaperMetricsLink().stream()
                 .forEach(url -> paperMetricsLinks.add(new PaperMetricsLink(url)));
@@ -206,7 +206,7 @@ public final class Helper {
 
     //获取本次待更新相关指标论文数量方法
     public static int getRefDataNum() {
-        SqlSession sqlSession = SQLHelper.getSqlSession();
+        SqlSession sqlSession = SqlHelper.getSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
         int num = utilMapper.countPaperMetricsLink();
         sqlSession.close();
@@ -216,7 +216,7 @@ public final class Helper {
     //初始化上次爬取最后一篇论文链接
     public static void initLastUrlForLastTime() {
         //从HELPER数据表中取出
-        SqlSession sqlSession = SQLHelper.getSqlSession();
+        SqlSession sqlSession = SqlHelper.getSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
         lastUrlForLastTime = utilMapper.getLastUrlFromLastTime();
         sqlSession.close();

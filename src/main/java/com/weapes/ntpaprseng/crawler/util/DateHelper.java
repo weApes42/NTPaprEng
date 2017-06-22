@@ -1,5 +1,8 @@
 package com.weapes.ntpaprseng.crawler.util;
 
+import com.weapes.ntpaprseng.crawler.search.ESClient;
+import com.weapes.ntpaprseng.crawler.store.MetricsPaper;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,7 +23,7 @@ public class DateHelper {
     public static long crawlStartTimeMills;//爬取开始时刻
     public static String crawlStartDate;//爬取开始日期
     public static long updateStartTimeMills;//更新开始时刻
-    public static String updateStartDate;//更新开始日期
+    public static String updateStartDate = "2017年06月22日 02:42:14:686";//更新开始日期
     public static String getCrawlTime() {
         final Date now = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT);
@@ -74,26 +77,25 @@ public class DateHelper {
 
     public static Calendar formatPublishTime(String publishTime) {
         Calendar calendar=Calendar.getInstance();
-        DateFormat dateFormat=new SimpleDateFormat(PUBLISH_TIME_FORMAT, Locale.ENGLISH);
-        Date date= null;
+        SimpleDateFormat dateFormat=new SimpleDateFormat(PUBLISH_TIME_FORMAT, Locale.ENGLISH);
         try {
-            date = dateFormat.parse(publishTime);
+            Date date = dateFormat.parse(publishTime);
+            calendar.setTime(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        calendar.setTime(date);
         return calendar;
     }
-    public static Calendar formatUpdateTime(String updateTime) {
+    public static Calendar formatUpdateTime(final String updateTime) {
         Calendar calendar=Calendar.getInstance();
-        DateFormat dateFormat=new SimpleDateFormat(UPDATE_TIME_FORMAT);
-        Date date= null;
+        SimpleDateFormat dateFormat=new SimpleDateFormat(UPDATE_TIME_FORMAT);
         try {
-            date = dateFormat.parse(updateTime);
+            Date date = dateFormat.parse(updateTime);
+            calendar.setTime(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        calendar.setTime(date);
         return calendar;
     }
+
 }

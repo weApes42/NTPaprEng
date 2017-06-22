@@ -10,12 +10,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class SQLHelperTest {
+public class SqlHelperTest {
     @Test
     @Ignore
     public void addColumns() throws ParseException {
         //http://www.nature.com/nature/journal/v542/n7640/full/nature21080.html
-        SqlSession sqlSession= SQLHelper.getSqlSession();
+        SqlSession sqlSession= SqlHelper.getSqlSession();
         UtilMapper utilMapper=sqlSession.getMapper(UtilMapper.class);
         boolean flag = utilMapper.updateLastUrl("www.baidu.com");
         System.out.println(flag);

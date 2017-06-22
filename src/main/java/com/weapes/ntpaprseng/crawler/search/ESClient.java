@@ -17,7 +17,7 @@ import java.util.Calendar;
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 public class ESClient {
-    private static final String IP = "172.29.108.136";
+    private static final String IP = "localhost";
     private static final int PORT = 9300;
     private static final String INDEX = "ntpaprseng";
     private static final String PAPER_TYPE = "PAPER";
@@ -28,6 +28,7 @@ public class ESClient {
     }
     static {
         try {
+            System.out.println("Welcome statics block code");
             transportClient = TransportClient.builder().settings(Settings.EMPTY).build()
                     .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(IP), PORT));
         } catch (UnknownHostException e) {
@@ -118,6 +119,9 @@ public class ESClient {
     public boolean updateMetricsPaperIntoES(MetricsPaper metricsPaper) {
         XContentBuilder json = null;
         Calendar calendar = DateHelper.formatUpdateTime(DateHelper.getUpdateStartDate());
+        if (calendar==null){
+            System.out.println("calendar is null");
+        }
         try {
             json = jsonBuilder().startObject()
                     .field("URL", metricsPaper.getUrl())
@@ -144,7 +148,7 @@ public class ESClient {
                     .field("Video", metricsPaper.getVideo())
                     .field("Linkedin", metricsPaper.getLinkedin())
                     .field("Q_A", metricsPaper.getQ_a())
-                    .field("FinalIndex", 0).endObject();
+                    .field("FinalIndex", metricsPaper.getFinalIndex()).endObject();
         } catch (IOException e) {
             e.printStackTrace();
         }

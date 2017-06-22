@@ -18,9 +18,8 @@ import java.io.InputStream;
 /**
  * Created by 不一样的天空 on 2017/6/20.
  */
-public class SQLHelper {
+public class SqlHelper {
     private static final SqlSessionFactory sqlSessionFactory=initSqlSessionFactory();
-    //private static final SqlSession sqlSession=initSqlSession();
     private static final String MYBATIS_CONFIG_PATH="resources/conf/mybatis-config.xml";
     public static SqlSessionFactory initSqlSessionFactory() {
         try (InputStream inputStream = Resources.getResourceAsStream(MYBATIS_CONFIG_PATH)) {
