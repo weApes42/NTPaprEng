@@ -23,7 +23,7 @@ public class DateHelper {
     public static long crawlStartTimeMills;//爬取开始时刻
     public static String crawlStartDate;//爬取开始日期
     public static long updateStartTimeMills;//更新开始时刻
-    public static String updateStartDate = "2017年06月22日 02:42:14:686";//更新开始日期
+    public static String updateStartDate;//更新开始日期
     public static String getCrawlTime() {
         final Date now = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT);
