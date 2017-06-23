@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 class PaperCrawler implements Crawler {
 
     //生产者消费者线程数
-    private static final int CREATOR_THREAD_NUM = 30;
+    private static final int CREATOR_THREAD_NUM = 10;
     private static final int CONSUMER_THREAD_NUM = 1;
 
     /*
