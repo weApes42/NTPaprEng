@@ -212,7 +212,6 @@ public class Paper implements Storable {
             LOGGER.info("保存论文信息到ElasticSearch中的PAPER成功");
         } else {
             System.err.println("保存论文信息到ElasticSearch中的PAPER失败");
-
         }
         //保存论文爬取详细日志
         LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
