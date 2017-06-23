@@ -36,7 +36,7 @@ public class PaperWebPage extends WebPage {
     private static final String AFFILIATION_CSS_SELECTOR =
             "#a1 > h3";
     private static final String PUBLISHTIME_CSS_SELECTOR =
-            "#content > article > header > dl.citation.dates > dd:nth-child(6) > time";
+            "#content > article > header > dl.citation.dates > dt.published-online + dd > time";
 
 
     // 有些抽取后的信息需要经过subString方法剪切,这些是所需偏移值。
