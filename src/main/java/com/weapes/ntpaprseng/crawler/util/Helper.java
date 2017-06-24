@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 public final class Helper {
     private static final OkHttpClient OK_HTTP_CLIENT =
             new OkHttpClient.Builder()
-                    .readTimeout(1, TimeUnit.MINUTES)
+                    .readTimeout(5, TimeUnit.MINUTES)
                     .build();
     private static final Pattern URL_CHECKER =
             Pattern.compile("\\w+://[\\w.]+/\\S*");
@@ -81,10 +81,9 @@ public final class Helper {
     }
 
     // 将配置文件映射为JSON对象
-    private static JSONObject fileMapToJSONObject(final String filePath) {
-        try {
-            InputStream in = Helper.class.getClassLoader()
-                    .getResourceAsStream(filePath);
+    public static JSONObject fileMapToJSONObject(final String filePath) {
+        try (InputStream in = Helper.class.getClassLoader()
+                .getResourceAsStream(filePath)){
             int length = in.available();
             byte[] bytes = new byte[length];
             in.read(bytes);
@@ -95,18 +94,11 @@ public final class Helper {
         }
     }
 
-    // 将配置文件映射为InputStream对象
-    private static InputStream fileMapToInputStream(final String filePath) {
-        InputStream inputStream = Helper.class.getClassLoader()
-                .getResourceAsStream(filePath);
-        return inputStream;
-    }
-
     // 将配置文件映射为Properties对象
     public static Properties fileMapToProperties(final String filePath) {
-        InputStream inputStream = fileMapToInputStream(filePath);
         Properties properties = new Properties();
-        try {
+        try (InputStream inputStream = Helper.class.getClassLoader()
+                .getResourceAsStream(filePath)){
             properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
@@ -196,30 +188,30 @@ public final class Helper {
     public static List<PaperMetricsLink> loadMetricsLinks() {
         List<PaperMetricsLink> paperMetricsLinks = new ArrayList<>();
         //从第二张数据表中取出已有所有论文相关指标页面链接
-        SqlSession sqlSession = SqlHelper.getSqlSession();
+        SqlSession sqlSession = SqlHelper.openSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
         utilMapper.listPaperMetricsLink().stream()
                 .forEach(url -> paperMetricsLinks.add(new PaperMetricsLink(url)));
-        sqlSession.close();
+        SqlHelper.closeSqlSession();
         return paperMetricsLinks;
     }
 
     //获取本次待更新相关指标论文数量方法
     public static int getRefDataNum() {
-        SqlSession sqlSession = SqlHelper.getSqlSession();
+        SqlSession sqlSession = SqlHelper.openSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
         int num = utilMapper.countPaperMetricsLink();
-        sqlSession.close();
+        SqlHelper.closeSqlSession();
         return num;
     }
 
     //初始化上次爬取最后一篇论文链接
     public static void initLastUrlForLastTime() {
         //从HELPER数据表中取出
-        SqlSession sqlSession = SqlHelper.getSqlSession();
+        SqlSession sqlSession = SqlHelper.openSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
         lastUrlForLastTime = utilMapper.getLastUrlFromLastTime();
-        sqlSession.close();
+        SqlHelper.closeSqlSession();
     }
 
     //获取任务周期

@@ -19,21 +19,34 @@ import java.io.InputStream;
  * Created by 不一样的天空 on 2017/6/20.
  */
 public class SqlHelper {
-    private static final SqlSessionFactory sqlSessionFactory=initSqlSessionFactory();
+    private static  SqlSessionFactory sqlSessionFactory;
+    private static ThreadLocal<SqlSession> sqlSessionThreadLocal = new ThreadLocal<>();
     private static final String MYBATIS_CONFIG_PATH="resources/conf/mybatis-config.xml";
-    public static SqlSessionFactory initSqlSessionFactory() {
+    static {
         try (InputStream inputStream = Resources.getResourceAsStream(MYBATIS_CONFIG_PATH)) {
             assert inputStream != null;
-            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder()
+            sqlSessionFactory = new SqlSessionFactoryBuilder()
                     .build(inputStream);
-            return sqlSessionFactory;
         } catch (IOException e) {
             e.printStackTrace();
-            return null;
         }
     }
-    public static SqlSession getSqlSession(){
-        return sqlSessionFactory.openSession();
+    public static SqlSession openSqlSession(){
+        //从当前线程获取
+        SqlSession sqlSession =sqlSessionThreadLocal.get();
+        if(sqlSession == null){
+            sqlSession = sqlSessionFactory.openSession(true);
+            //将sqlSession与当前线程绑定
+            sqlSessionThreadLocal.set(sqlSession);
+        }
+        return sqlSession;
     }
-
+    public static void closeSqlSession(){
+        //从当前线程获取
+        SqlSession sqlSession =sqlSessionThreadLocal.get();
+        if(sqlSession != null){
+            sqlSession.close();
+            sqlSessionThreadLocal.remove();
+        }
+    }
 }

@@ -9,15 +9,15 @@
          VALUES(#{url},#{articlePosition},#{totalNumber},#{isSuccessful},#{crawlTime})
     </insert>
     <insert id="saveCrawlTotalLog">
-        INSERT INTO CrawlTotalLog(times,crawlTime, successfulNumber, failedNumber, totalNumber, averageTime)
-        VALUES(#{times},#{crawlTime},#{successfulNumber},#{failedNumber},#{totalNumber},#{averageTime})
+        INSERT INTO CrawlTotalLog(crawlTime, successfulNumber, failedNumber, totalNumber, averageTime)
+        VALUES(#{crawlTime},#{successfulNumber},#{failedNumber},#{totalNumber},#{averageTime})
     </insert>
     <insert id="saveUpdateDetailLog">
         INSERT INTO UpdateDetailLog(url, articlePosition, totalNumber, isSuccessful, updateTime)
         VALUES(#{url},#{articlePosition},#{totalNumber},#{isSuccessful},#{updateTime})
     </insert>
     <insert id="saveUpdateTotalLog">
-        INSERT INTO UpdateTotalLog(times, updateTime, successfulNumber, failedNumber, totalNumber, averageTime)
-        VALUES(#{times},#{updateTime},#{successfulNumber},#{failedNumber},#{totalNumber},#{averageTime})
+        INSERT INTO UpdateTotalLog(updateTime, successfulNumber, failedNumber, totalNumber, averageTime)
+        VALUES(#{updateTime},#{successfulNumber},#{failedNumber},#{totalNumber},#{averageTime})
     </insert>
  </mapper>

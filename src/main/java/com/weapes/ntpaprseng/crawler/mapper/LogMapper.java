@@ -13,8 +13,7 @@ public interface LogMapper {
                             @Param("crawlTime") String crawlTime
     );
 
-    boolean saveCrawlTotalLog(@Param("times") int times,
-                           @Param("crawlTime") String crawlTime,
+    boolean saveCrawlTotalLog(@Param("crawlTime") String crawlTime,
                            @Param("successfulNumber") int successfulNumber,
                            @Param("failedNumber") int failedNumber,
                            @Param("totalNumber") int totalNumber,
@@ -28,8 +27,7 @@ public interface LogMapper {
                              @Param("updateTime") String updateTime
     );
 
-    boolean saveUpdateTotalLog(@Param("times") int times,
-                            @Param("updateTime") String updateTime,
+    boolean saveUpdateTotalLog(@Param("updateTime") String updateTime,
                             @Param("successfulNumber") int successfulNumber,
                             @Param("failedNumber") int failedNumber,
                             @Param("totalNumber") int totalNumber,

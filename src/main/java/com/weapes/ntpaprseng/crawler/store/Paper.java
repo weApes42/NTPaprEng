@@ -15,7 +15,6 @@ import static com.weapes.ntpaprseng.crawler.util.Helper.getLogger;
 public class Paper implements Storable {
 
     private static final Logger LOGGER = getLogger(Paper.class);
-    private static final SqlSession sqlSession = SqlHelper.getSqlSession();
     private String authors;
     private String url;
     private String title;
@@ -186,10 +185,10 @@ public class Paper implements Storable {
         if (Log.getUrlNumbers().get() == Log.getCrawlingNumbers().get()) { //记录最后一篇论文链接
             Log.setLastLink(getUrl());
         }
+        final SqlSession sqlSession = SqlHelper.openSqlSession();
         LOGGER.info("保存爬取的数据: type=Paper");
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
         boolean isSucceed = paperMapper.savePaper(this);
-        sqlSession.commit();
         if (isSucceed) {
             LOGGER.info("当前共有" + Log.getCrawlingSucceedNumbers().incrementAndGet() + "篇爬取成功..."
                     + "url=" + getUrl());
@@ -234,8 +233,12 @@ public class Paper implements Storable {
             long endTime = System.currentTimeMillis();//结束爬取的时间
             String averageTime = DateHelper.getSeconds((endTime - DateHelper.getCrawlStartTimeMills()) / Log.getUrlNumbers().get());
             //保存爬取完成的总体情况日志到数据库中
-            isSucceed = logMapper.saveCrawlTotalLog(1, DateHelper.getCrawlStartDate(), Log.getCrawlingSucceedNumbers().get(),
-                    Log.getCrawlingFailedNumber().get(), Log.getUrlNumbers().get(), averageTime);
+            isSucceed = logMapper.saveCrawlTotalLog(
+                    DateHelper.getCrawlStartDate(),
+                    Log.getCrawlingSucceedNumbers().get(),
+                    Log.getCrawlingFailedNumber().get(),
+                    Log.getUrlNumbers().get(),
+                    averageTime);
             if (isSucceed) {
                 LOGGER.info("爬取过程总体日志保存成功");
             } else {
@@ -248,8 +251,8 @@ public class Paper implements Storable {
             Log.getCrawlingNumbers().set(0);
             Helper.firstInsertCrawlDetailLog = true;
             Log.getUrlNumbers().set(0); //重置爬取论文总量
+            SqlHelper.closeSqlSession();
         }
-        sqlSession.commit();
         return isSucceed;
     }
 
@@ -262,14 +265,4 @@ public class Paper implements Storable {
         String subString2 = subString1.substring(5, index2);
         return subString + subString2 + "/metrics";
     }
-//    public void save(){
-//        SqlSession sqlSession= SqlHelper.getSqlSession();
-//        PaperMapper paperMapper=sqlSession.getMapper(PaperMapper.class);
-//        this.setUrl("www.baidu.com");
-//        paperMapper.savePaper(this);
-//        sqlSession.commit();
-//    }
-//    public static void main(String[]args){
-//        new Paper().save();
-//    }
 }

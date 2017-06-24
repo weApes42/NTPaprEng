@@ -18,7 +18,6 @@ public class MetricsPaper implements Storable {
 
     private static final Logger LOGGER =
             getLogger(Paper.class);
-    private static final SqlSession sqlSession= SqlHelper.getSqlSession();
     private String url;
     private int pageViews;
     private int webOfScience;
@@ -193,6 +192,7 @@ public class MetricsPaper implements Storable {
                 + "正在更新第" + Log.getCurrentUpdateNumbers().incrementAndGet() + "篇\n"
                 + "链接为：" + getUrl());
         System.err.println("*********************"+toString()+"*******************");
+        final SqlSession sqlSession= SqlHelper.openSqlSession();
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
         boolean succeed = paperMapper.saveMetricsPaper(this);
         LOGGER.info("保存爬取的数据: type = MetricsPaper.");
@@ -232,7 +232,7 @@ public class MetricsPaper implements Storable {
             long endTime = System.currentTimeMillis();//更新结束的时间
             String averageTime = DateHelper.getSeconds((endTime - startTime) / getUpdateTotalNumbers().get());
             //保存更新完成后的总体情况数据到数据库中
-            succeed = logMapper.saveUpdateTotalLog(1,
+            succeed = logMapper.saveUpdateTotalLog(
                     DateHelper.getUpdateStartDate(),
                     getUpdateSucceedNumbers().get(),
                     getUpdateFailedNumbers().get(),
@@ -249,8 +249,8 @@ public class MetricsPaper implements Storable {
             getCurrentUpdateNumbers().set(0);
             firstInsertUpdateDetailLog = true;
             Helper.isUpdateFinished = true;
+            SqlHelper.closeSqlSession();
         }
-        sqlSession.commit();
         return succeed;
     }
 

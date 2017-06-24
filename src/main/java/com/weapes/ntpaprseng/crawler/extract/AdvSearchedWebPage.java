@@ -86,11 +86,10 @@ public class AdvSearchedWebPage extends WebPage {
 
     private static void saveFirstUrl(String url) {
         if (Helper.isFirstUrl) {//如果是第一篇论文，则更新论文链接到表Helper中的lastUrl字段
-            SqlSession sqlSession= SqlHelper.getSqlSession();
+            SqlSession sqlSession= SqlHelper.openSqlSession();
             UtilMapper utilMapper=sqlSession.getMapper(UtilMapper.class);
             boolean isSucceed = utilMapper.updateLastUrl(url);
-            sqlSession.commit();
-            sqlSession.close();
+            SqlHelper.closeSqlSession();
             if (isSucceed) {//成功之后就更改isFirstUrl为false 即后面的论文都不是第一篇了
                 Helper.isFirstUrl = false;
             }
