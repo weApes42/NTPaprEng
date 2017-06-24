@@ -191,7 +191,6 @@ public class MetricsPaper implements Storable {
         LOGGER.info("本次更新论文" + Log.getUpdateTotalNumbers().get() + "篇，"
                 + "正在更新第" + Log.getCurrentUpdateNumbers().incrementAndGet() + "篇\n"
                 + "链接为：" + getUrl());
-        System.err.println("*********************"+toString()+"*******************");
         final SqlSession sqlSession= SqlHelper.openSqlSession();
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
         boolean succeed = paperMapper.saveMetricsPaper(this);

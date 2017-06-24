@@ -122,7 +122,6 @@ public final class Helper {
 
         final Response executed = OK_HTTP_CLIENT.newCall(request)
                 .execute();
-
         return executed.body().string();
     }
 
