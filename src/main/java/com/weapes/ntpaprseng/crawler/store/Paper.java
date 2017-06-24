@@ -24,8 +24,8 @@ public class Paper implements Storable {
     private String doi;
     private int volume;
     private int issue;
-    private int pageBegin;
-    private int pageEnd;
+    private String pageBegin;
+    private String pageEnd;
     private String affiliation;
     private String publishTime;
     private String crawlTime;
@@ -42,8 +42,8 @@ public class Paper implements Storable {
                  final String doi,
                  final int volume,
                  final int issue,
-                 final int pageBegin,
-                 final int pageEnd,
+                 final String pageBegin,
+                 final String pageEnd,
                  final String affiliation,
                  final String publishTime,
                  final String crawlTime) {
@@ -99,11 +99,11 @@ public class Paper implements Storable {
         this.issue = issue;
     }
 
-    public void setPageBegin(int pageBegin) {
+    public void setPageBegin(String pageBegin) {
         this.pageBegin = pageBegin;
     }
 
-    public void setPageEnd(int pageEnd) {
+    public void setPageEnd(String pageEnd) {
         this.pageEnd = pageEnd;
     }
 
@@ -155,11 +155,11 @@ public class Paper implements Storable {
         return issue;
     }
 
-    public int getPageBegin() {
+    public String getPageBegin() {
         return pageBegin;
     }
 
-    public int getPageEnd() {
+    public String getPageEnd() {
         return pageEnd;
     }
 
