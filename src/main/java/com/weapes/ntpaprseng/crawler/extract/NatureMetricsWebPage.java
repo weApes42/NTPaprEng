@@ -29,6 +29,7 @@ public class NatureMetricsWebPage extends WebPage {
     // TODO 抽取Metrics信息
     public Storable extract() {
         Document doc = Jsoup.parse(getText());
+    //    System.out.println(getText());
         String number, referenceUnit;
         //抽取Total citations信息
         Elements citation = doc.select(TotalCitations);
@@ -43,7 +44,7 @@ public class NatureMetricsWebPage extends WebPage {
         //抽取Online attention信息
         Elements onlineAttention = doc.select(OnlineAttention);
         for (Element element : onlineAttention) {
-            referenceUnit = null;
+                referenceUnit = null;
             referenceUnit = element.select("div").text();
             number = element.select("div > b").text();
             if (referenceUnit != null) {

@@ -11,8 +11,9 @@ public class HelperTest {
     @Test
     @Ignore
     public void load() throws Exception {
-        final List<? extends Followable> load = Helper.loadSeeds();
-        Assert.assertTrue(load.size() != 0);
+      Helper.loadMetricsLinks().stream().forEach(
+              paperMetricsLink -> System.out.println(paperMetricsLink.getUrl())
+      );
     }
 
 }

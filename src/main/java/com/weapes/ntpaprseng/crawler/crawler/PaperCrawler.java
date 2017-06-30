@@ -10,8 +10,8 @@ import java.util.concurrent.Executors;
 class PaperCrawler implements Crawler {
 
     //生产者消费者线程数
-    private static final int CREATOR_THREAD_NUM = 4;
-    private static final int CONSUMER_THREAD_NUM = 1;
+    private static final int CREATOR_THREAD_NUM = 10;
+    private static final int CONSUMER_THREAD_NUM = 5;
 
     /*
      * 生产者负责把Followable解析为Storable,
@@ -41,5 +41,8 @@ class PaperCrawler implements Crawler {
 
         LOGGER.info("种子分发完成...");
 
+    }
+    public static void main(String[]args){
+        new PaperCrawler().crawl();
     }
 }

@@ -79,42 +79,6 @@ public class ESClient {
         }
         return ESClient.getInstance().putPaperIntoES(paper.getUrl(),json);
     }
-    public boolean saveInitMetricsPaperIntoES(Paper paper) {
-        XContentBuilder json = null;
-        Calendar calendar=DateHelper.formatPublishTime(paper.getPublishTime());
-        try {
-            json = jsonBuilder().startObject()
-                    .field("URL", paper.getMetricsUrl())
-                    .field("UpdateTime", DateHelper.getUpdateTime())
-                    .field("Year", calendar.get(Calendar.YEAR))
-                    .field("Month", calendar.get(Calendar.MONTH)+1)
-                    .field("Day", calendar.get(Calendar.DAY_OF_MONTH))
-                    .field("Page_views", 0)
-                    .field("Web_Of_Science", 0)
-                    .field("CrossRef", 0)
-                    .field("Scopus", 0)
-                    .field("News_outlets", 0)
-                    .field("Reddit", 0)
-                    .field("Blog", 0)
-                    .field("Tweets", 0)
-                    .field("FaceBook", 0)
-                    .field("Google", 0)
-                    .field("Pinterest", 0)
-                    .field("Wikipedia", 0)
-                    .field("Mendeley", 0)
-                    .field("CiteUlink", 0)
-                    .field("Zotero", 0)
-                    .field("F10000", 0)
-                    .field("Video", 0)
-                    .field("Linkedin", 0)
-                    .field("Q_A", 0)
-                    .field("FinalIndex", 0)
-                    .endObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return singleton.putMetricsPaperIntoES(json);
-    }
 
     public boolean updateMetricsPaperIntoES(MetricsPaper metricsPaper) {
         XContentBuilder json = null;

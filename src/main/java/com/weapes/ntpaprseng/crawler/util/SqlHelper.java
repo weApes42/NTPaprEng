@@ -36,6 +36,7 @@ public class SqlHelper {
         SqlSession sqlSession =sqlSessionThreadLocal.get();
         if(sqlSession == null){
             sqlSession = sqlSessionFactory.openSession(true);
+            System.err.println("新建SqlSession");
             //将sqlSession与当前线程绑定
             sqlSessionThreadLocal.set(sqlSession);
         }

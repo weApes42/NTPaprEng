@@ -4,14 +4,14 @@ import com.weapes.ntpaprseng.crawler.log.Log;
 import com.weapes.ntpaprseng.crawler.mapper.LogMapper;
 import com.weapes.ntpaprseng.crawler.mapper.PaperMapper;
 import com.weapes.ntpaprseng.crawler.search.ESClient;
+import com.weapes.ntpaprseng.crawler.task.UpdateTopPaperTask;
 import com.weapes.ntpaprseng.crawler.util.DateHelper;
 import com.weapes.ntpaprseng.crawler.util.Helper;
+import com.weapes.ntpaprseng.crawler.util.IndexHelper;
 import com.weapes.ntpaprseng.crawler.util.SqlHelper;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 
-import static com.weapes.ntpaprseng.crawler.log.Log.*;
-import static com.weapes.ntpaprseng.crawler.util.Helper.firstInsertUpdateDetailLog;
 import static com.weapes.ntpaprseng.crawler.util.Helper.getLogger;
 
 public class MetricsPaper implements Storable {
@@ -39,8 +39,7 @@ public class MetricsPaper implements Storable {
     private int linkedin;
     private int q_a;
     private String updateTime;
-    private int finalIndex;
-
+    private double finalIndex;
     public MetricsPaper(final String url,
                         final int pageViews,
                         final int webOfScience,
@@ -82,7 +81,7 @@ public class MetricsPaper implements Storable {
         this.video = video;
         this.linkedin = linkedin;
         this.q_a = q_a;
-        this.finalIndex = 0;
+        this.finalIndex = 0.0;
     }
 
     public MetricsPaper() {
@@ -182,8 +181,27 @@ public class MetricsPaper implements Storable {
         return updateTime;
     }
 
-    public int getFinalIndex() {
-        return finalIndex;
+    public double getFinalIndex() {
+        return IndexHelper.build().addPageViews(pageViews)
+                .addWebOfScience(webOfScience)
+                .addCrossRef(crossRef)
+                .addScopus(scopus)
+                .addNewsOutlets(newsOutlets)
+                .addReddit(reddit)
+                .addBlog(blog)
+                .addTweets(tweets)
+                .addFacebook(facebook)
+                .addGoogle(google)
+                .addPinterest(pinterest)
+                .addWikipedia(wikipedia)
+                .addMendeley(mendeley)
+                .addCiteUlink(citeUlink)
+                .addZotero(zotero)
+                .addF1000(f1000)
+                .addVideo(video)
+                .addLinkedin(linkedin)
+                .addQ_a(q_a)
+                .getFinalIndex();
     }
 
     @Override
@@ -193,13 +211,14 @@ public class MetricsPaper implements Storable {
                 + "链接为：" + getUrl());
         final SqlSession sqlSession= SqlHelper.openSqlSession();
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
+        LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
         boolean succeed = paperMapper.saveMetricsPaper(this);
         LOGGER.info("保存爬取的数据: type = MetricsPaper.");
         if (succeed) {
-            LOGGER.info("当前共有" + getUpdateSucceedNumbers().incrementAndGet() + "篇论文相关指标更新成功..."
+            LOGGER.info("当前共有" + Log.getUpdateSucceedNumbers().incrementAndGet() + "篇论文相关指标更新成功..."
                     + "链接为:" + getUrl());
         } else {
-            LOGGER.error("当前共有" + getUpdateFailedNumbers().incrementAndGet() + "篇论文相关指标更新失败..."
+            LOGGER.error("当前共有" + Log.getUpdateFailedNumbers().incrementAndGet() + "篇论文相关指标更新失败..."
                     + "链接为:" + getUrl());
         }
         boolean isSuccess = ESClient.getInstance().updateMetricsPaperIntoES(this);//更新论文指标到ElasticSearch中的REF_DATA
@@ -209,47 +228,49 @@ public class MetricsPaper implements Storable {
             System.err.println("更新论文指标到ElasticSearch中的METRICS_PAPER失败");
         }
         //保存更新的具体日志数据到数据库中
-        LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
-        succeed = logMapper.saveUpdateDetailLog(getUrl(),
-                getCurrentUpdateNumbers().get(),
-                getUpdateTotalNumbers().get(),
-                succeed,
-                DateHelper.getUpdateStartDate()
-        );
-        if (succeed) {
-            LOGGER.info("更新过程具体日志保存成功");
-        } else {
-            LOGGER.error("更新过程具体日志保存失败");
-        }
-        //更新完成，打印、保存日志和更新任务状态
-        if (getCurrentUpdateNumbers().get() == getUpdateTotalNumbers().get()) {
-            LOGGER.info("更新完成，本次更新相关指标论文总量：" + getUpdateTotalNumbers().get()
-                    + " 成功数：" + getUpdateSucceedNumbers().get()
-                    + " 失败数：" + getUpdateFailedNumbers());
 
+//        succeed = logMapper.saveUpdateDetailLog(getUrl(),
+//                Log.getCurrentUpdateNumbers().get(),
+//                Log.getUpdateTotalNumbers().get(),
+//                succeed,
+//                DateHelper.getCrawlTime());
+//
+//        if (succeed) {
+//            LOGGER.info("更新过程具体日志保存成功");
+//        } else {
+//            LOGGER.error("更新过程具体日志保存失败");
+//        }
+        //更新完成，打印、保存日志和更新任务状态
+        System.err.println(Log.getCurrentUpdateNumbers().get()+"--------------Before-------------"+Log.getUpdateTotalNumbers().get());
+        if (Log.getCurrentUpdateNumbers().get() == Log.getUpdateTotalNumbers().get()) {
+            LOGGER.info("更新完成，本次更新相关指标论文总量：" + Log.getUpdateTotalNumbers().get()
+                    + " 成功数：" + Log.getUpdateSucceedNumbers().get()
+                    + " 失败数：" + Log.getUpdateFailedNumbers().get());
+            System.err.println("--------------After-------------");
             long startTime = DateHelper.getUpdateStartTimeMills();  //开始更新的时间
             long endTime = System.currentTimeMillis();//更新结束的时间
-            String averageTime = DateHelper.getSeconds((endTime - startTime) / getUpdateTotalNumbers().get());
+            String averageTime = DateHelper.getSeconds((endTime - startTime) / Log.getUpdateTotalNumbers().get());
             //保存更新完成后的总体情况数据到数据库中
-            succeed = logMapper.saveUpdateTotalLog(
-                    DateHelper.getUpdateStartDate(),
-                    getUpdateSucceedNumbers().get(),
-                    getUpdateFailedNumbers().get(),
-                    getUpdateTotalNumbers().get(),
-                    averageTime);
-            if (succeed) {
-                LOGGER.info("更新过程总体日志保存成功");
-            } else {
-                LOGGER.error("更新过程总体日志保存失败");
-            }
-            getUpdateSucceedNumbers().set(0);
-            getUpdateFailedNumbers().set(0);
+//            succeed = logMapper.saveUpdateTotalLog(
+//                    DateHelper.getUpdateStartDate(),
+//                    Log.getUpdateSucceedNumbers().get(),
+//                    Log.getUpdateFailedNumbers().get(),
+//                    Log.getUpdateTotalNumbers().get(),
+//                    averageTime);
+//            if (succeed) {
+//                LOGGER.info("更新过程总体日志保存成功");
+//            } else {
+//                LOGGER.error("更新过程总体日志保存失败");
+//            }
+            Log.getUpdateSucceedNumbers().set(0);
+            Log.getUpdateFailedNumbers().set(0);
             Log.getCurrentUpdateNumbers().set(0);
-            getCurrentUpdateNumbers().set(0);
-            firstInsertUpdateDetailLog = true;
+            Log.getCurrentUpdateNumbers().set(0);
+            Helper.firstInsertUpdateDetailLog = true;
             Helper.isUpdateFinished = true;
-            SqlHelper.closeSqlSession();
+            new Thread(new UpdateTopPaperTask()).start();//更新Top论文信息
         }
+        SqlHelper.closeSqlSession();
         return succeed;
     }
 

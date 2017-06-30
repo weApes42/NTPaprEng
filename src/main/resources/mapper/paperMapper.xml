@@ -9,7 +9,11 @@
         volume, issue, pageBegin, pageEnd, affiliation, publishTime, crawlTime)
          VALUES(#{url},#{title},#{authors},#{sourceTitle},#{issn},#{eissn},
          #{doi},#{volume},#{issue},#{pageBegin},#{pageEnd},#{affiliation},
-         #{publishTime},#{crawlTime})
+         #{publishTime},#{crawlTime}) ON DUPLICATE KEY UPDATE
+        url=#{url},title=#{title},authors=#{authors},sourceTitle=#{sourceTitle},
+        issn=#{issn},eissn=#{eissn},doi=#{doi},volume=#{volume},issue=#{issue},
+        pageBegin=#{pageBegin},pageEnd=#{pageEnd},affiliation=#{affiliation},
+        publishTime=#{publishTime},crawlTime=#{crawlTime}
     </insert>
     <insert id="saveMetricsPaper">
         INSERT INTO PaperMetrics(url, updateTime, pageViews, webOfScience, crossRef,
@@ -20,4 +24,13 @@
         #{wikipedia},#{mendeley},#{citeUlink},#{zotero},#{f1000},#{video},#{linkedin},
         #{q_a},#{finalIndex})
     </insert>
+    <select id="getPaperTitleByUrl" resultType="java.lang.String">
+        SELECT title FROM Paper WHERE url=#{url};
+    </select>
+    <select id="saveTopPaperInfo">
+        INSERT INTO Top(url, title) VALUES (#{url},#{title});
+    </select>
+    <delete id="clearTopPapers">
+        DELETE FROM Top;
+    </delete>
 </mapper>

@@ -15,7 +15,7 @@ public class SqlHelperTest {
     @Ignore
     public void addColumns() throws ParseException {
         //http://www.nature.com/nature/journal/v542/n7640/full/nature21080.html
-        SqlSession sqlSession= SqlHelper.getSqlSession();
+        SqlSession sqlSession= SqlHelper.openSqlSession();
         UtilMapper utilMapper=sqlSession.getMapper(UtilMapper.class);
         boolean flag = utilMapper.updateLastUrl("www.baidu.com");
         System.out.println(flag);

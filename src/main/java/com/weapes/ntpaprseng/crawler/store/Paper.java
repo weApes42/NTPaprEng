@@ -196,16 +196,6 @@ public class Paper implements Storable {
             LOGGER.error("当前共有" + Log.getCrawlingFailedNumber().incrementAndGet() + "篇爬取失败..."
                     + "url=" + getUrl());
         }
-        MetricsPaper metricsPaper = new MetricsPaper()
-                .setUrl(getMetricsUrl())
-                .setUpdateTime(DateHelper.getUpdateTime());
-        isSucceed = paperMapper.saveMetricsPaper(metricsPaper);//初始化PaperMetrics
-        if (isSucceed) {
-            LOGGER.info("url=" + getUrl() + "的PaperMetrics初始化成功");
-        } else {
-            LOGGER.error("url=" + getUrl() + "的PaperMetrics初始化失败");
-        }
-
         isSucceed = ESClient.getInstance().savePaperIntoES(this);//保存论文信息到ES中
         if (isSucceed) {
             LOGGER.info("保存论文信息到ElasticSearch中的PAPER成功");
@@ -251,18 +241,8 @@ public class Paper implements Storable {
             Log.getCrawlingNumbers().set(0);
             Helper.firstInsertCrawlDetailLog = true;
             Log.getUrlNumbers().set(0); //重置爬取论文总量
-            SqlHelper.closeSqlSession();
         }
+        SqlHelper.closeSqlSession();
         return isSucceed;
-    }
-
-    // 将原来的论文详细页面url进行字符串处理，转化为metric相关指标页面url
-    public String getMetricsUrl() {
-        int index1 = getUrl().indexOf("/full");
-        String subString = getUrl().substring(0, index1);
-        String subString1 = getUrl().substring(index1);
-        int index2 = subString1.indexOf(".html");
-        String subString2 = subString1.substring(5, index2);
-        return subString + subString2 + "/metrics";
     }
 }

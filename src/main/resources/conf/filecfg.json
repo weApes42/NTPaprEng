@@ -1,5 +1,4 @@
 {
-  "allPapersFetch": "resources/conf/allPapersFetch.json",
   "index": "resources/conf/index.json",
   "weight": "resources/conf/weight.json",
   "hikari": "resources/conf/hikari.properties",

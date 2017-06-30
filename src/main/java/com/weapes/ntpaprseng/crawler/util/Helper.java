@@ -16,9 +16,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -65,9 +63,7 @@ public final class Helper {
 
     public static List<AdvSearchLink> loadSeeds() {
         LOGGER.info("开始加载种子...");
-        JSONObject jsonObject = fileMapToJSONObject(getCfg().getString("allPapersFetch"));
-        final List<String> urls =
-                parseURLSWithJSONObject(jsonObject);
+        final List<String> urls = Arrays.asList(getOriginalUrl());
         LOGGER.info("种子加载完成...");
         return urls.stream()
                 .map(AdvSearchLink::new)
@@ -122,6 +118,7 @@ public final class Helper {
 
         final Response executed = OK_HTTP_CLIENT.newCall(request)
                 .execute();
+
         return executed.body().string();
     }
 
@@ -137,38 +134,19 @@ public final class Helper {
     }
 
     // 将JSON对象映射为种子
-    private static List<String> parseURLSWithJSONObject(final JSONObject object) {
-
-        final JSONObject range = object.getJSONObject("first_range");
-        final JSONArray journals = object.getJSONArray("journals");
-        final String article_type = object.getString("article_type");
-        final String order = object.getString("order");
-
-        return journals.stream()
-                .map(journal -> concatUrl(range, journal, article_type, order))
-                .collect(Collectors.toList());
-    }
-
-    private static String concatUrl(final JSONObject range,
-                                    final Object journal) {
-        return concatUrl(range, journal, "research", "date_desc");
-    }
-
-    private static String concatUrl(final JSONObject range,
-                                    final Object journal,
-                                    final String article_type) {
-        return concatUrl(range, journal, article_type, "date_desc");
+    private static String getOriginalUrl() {
+        return concatOriginalUrl();
     }
 
     // 生成种子链接URL
-    private static String concatUrl(final JSONObject range,
-                                    final Object journal,
-                                    final String article_type,
-                                    final String order) {
+    private static String concatOriginalUrl() {
         // 根据是否是第一次爬取决定爬取的论文年份范围
-        int begin, end;
-        begin = range.getInteger("begin");
-        end = range.getInteger("end");
+        SqlSession sqlSession = SqlHelper.openSqlSession();
+        UtilMapper mapper = sqlSession.getMapper(UtilMapper.class);
+        HashMap<String,Integer> crawlRange = mapper.getCrawlRange();
+        int begin = crawlRange.get("startYear");
+        int end = crawlRange.get("endYear");
+        SqlHelper.closeSqlSession();
         // 如果只搜索特点年份,则URL的data_range参数应只有一个年份。
         String dateRange;
         if (begin == end)
@@ -178,9 +156,9 @@ public final class Helper {
 
         return BASE_URL
                 + dateRange
-                + "&journal=" + journal.toString().toLowerCase()
-                + "&article_type=" + article_type.toLowerCase()
-                + "&order=" + order.toLowerCase();
+                + "&journal=nature"
+                + "&article_type=research"
+                + "&order=date_desc";
     }
 
 
@@ -189,9 +167,9 @@ public final class Helper {
         //从第二张数据表中取出已有所有论文相关指标页面链接
         SqlSession sqlSession = SqlHelper.openSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
-        utilMapper.listPaperMetricsLink().stream()
+        utilMapper.listPaperLink().stream()
                 .forEach(url -> paperMetricsLinks.add(new PaperMetricsLink(url)));
-        SqlHelper.closeSqlSession();
+        sqlSession.close();
         return paperMetricsLinks;
     }
 
@@ -199,7 +177,7 @@ public final class Helper {
     public static int getRefDataNum() {
         SqlSession sqlSession = SqlHelper.openSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
-        int num = utilMapper.countPaperMetricsLink();
+        int num = utilMapper.countPaperLink();
         SqlHelper.closeSqlSession();
         return num;
     }
@@ -215,8 +193,20 @@ public final class Helper {
 
     //获取任务周期
     public static int getTaskPeriod() {
-        String filePath = getCfg().getString("allPapersFetch");
-        JSONObject jsonObject = fileMapToJSONObject(filePath);
-        return jsonObject.getJSONObject("interval").getInteger("task_period");
+        SqlSession sqlSession = SqlHelper.openSqlSession();
+        UtilMapper mapper = sqlSession.getMapper(UtilMapper.class);
+        int taskPeriod=mapper.getTaskPeriod();
+        SqlHelper.closeSqlSession();
+        return taskPeriod;
     }
+    // 将原来的论文详细页面url进行字符串处理，转化为metric相关指标页面url
+    public static String getPaperMetricsUrl(String url) {
+        int index1 =url.indexOf("/full");
+        String subString = url.substring(0, index1);
+        String subString1 = url.substring(index1);
+        int index2 = subString1.indexOf(".html");
+        String subString2 = subString1.substring(5, index2);
+        return subString + subString2 + "/metrics";
+    }
+
 }

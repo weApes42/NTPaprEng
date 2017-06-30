@@ -3,17 +3,58 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.weapes.ntpaprseng.crawler.mapper.UtilMapper">
+    <resultMap id="Weight" type="HashMap">
+        <result property="pageViews" column="pageViews"/>
+        <result property="webOfScience" column="webOfScience"/>
+        <result property="crossRef" column="crossRef"/>
+        <result property="scopus" column="scopus"/>
+        <result property="newsOutlets" column="newsOutlets"/>
+        <result property="reddit" column="reddit"/>
+        <result property="blog" column="blog"/>
+        <result property="tweets" column="tweets"/>
+        <result property="facebook" column="facebook"/>
+        <result property="google" column="google"/>
+        <result property="pinterest" column="pinterest"/>
+        <result property="wikipedia" column="wikipedia"/>
+        <result property="mendeley" column="mendeley"/>
+        <result property="citeUlink" column="citeUlink"/>
+        <result property="zotero" column="zotero"/>
+        <result property="f1000" column="f1000"/>
+        <result property="video" column="video"/>
+        <result property="linkedin" column="linkedin"/>
+        <result property="q_a" column="q_a"/>
+    </resultMap>
+    <resultMap id="CrawlRange" type="HashMap">
+        <result property="startYear" column="startYear"/>
+        <result property="endYear" column="EndYear"/>
+    </resultMap>
 
-    <select id="countPaperMetricsLink" resultType="int">
-        SELECT count(DISTINCT url) FROM PaperMetrics;
+    <select id="countPaperLink" resultType="int">
+        SELECT count(url) FROM Paper;
     </select>
-    <select id="listPaperMetricsLink" resultType="java.lang.String">
-      SELECT DISTINCT url FROM PaperMetrics;
+    <select id="listPaperLink" resultType="java.lang.String">
+         SELECT  url FROM Paper;
     </select>
     <select id="getLastUrlFromLastTime" resultType="java.lang.String">
         SELECT lastUrl FROM Helper;
     </select>
     <update id="updateLastUrl">
-        UPDATE Helper SET  lastUrl = #{lastUrl} WHERE id = 1
+        UPDATE Helper SET  lastUrl = #{lastUrl} WHERE id = 1;
     </update>
- </mapper>
+    <select id="getCrawlRange" resultMap="CrawlRange">
+        SELECT startYear,endYear FROM Config;
+    </select>
+    <select id="getTaskPeriod" resultType="int">
+        SELECT taskPeriod FROM Config;
+    </select>
+    <select id="getTopNumber" resultType="int">
+        SELECT topNumber from Config;
+    </select>
+    <select id="listWeight" resultMap="Weight">
+        SELECT * FROM Weight;
+    </select>
+    <select id="listFinalIndexByUrl" resultType="java.lang.Double">
+        SELECT finalIndex from PaperMetrics WHERE url=#{url}
+        ORDER BY updateTime limit 2;
+    </select>
+</mapper>
