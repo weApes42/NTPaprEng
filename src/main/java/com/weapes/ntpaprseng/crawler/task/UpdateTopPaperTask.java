@@ -35,13 +35,12 @@ public class UpdateTopPaperTask implements Runnable {
         Collections.sort(list,(entity1, entity2) ->
                 entity2.getValue().compareTo(entity1.getValue())
         );
-        int topNumber = utilMapper.getTopNumber();
-        System.out.println("TopNumber"+topNumber);
+        int topNumber = 100;
         topNumber = topNumber < list.size() ? topNumber :list.size();
         for (int i = 0; i < topNumber; i++) {
             String url = list.get(i).getKey();
             String title = paperMapper.getPaperTitleByUrl(url);
-            System.out.println(url+"  "+title);
+          //  System.out.println(url+"  "+title);
             paperMapper.saveTopPaperInfo(url,title);
             sqlSession.commit();
         }

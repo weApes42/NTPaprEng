@@ -207,7 +207,7 @@ public class IndexHelper {
     }
 
     public  Double getFinalIndex() {
-        final SqlSession sqlSession = SqlHelper.openSqlSession();
+        final SqlSession sqlSession = SqlHelper.openThreadSqlSession();
         UtilMapper mapper = sqlSession.getMapper(UtilMapper.class);
         HashMap<String, Double> weights = mapper.listWeight();
         double finalIndex = weights.get("pageViews") * getPageViews();
@@ -229,7 +229,6 @@ public class IndexHelper {
         finalIndex += weights.get("video") * getVideo();
         finalIndex += weights.get("linkedin") * getLinkedin();
         finalIndex += weights.get("q_a") * getQ_a();
-        System.out.println("******************************"+finalIndex);
         SqlHelper.closeSqlSession();
         return finalIndex;
     }

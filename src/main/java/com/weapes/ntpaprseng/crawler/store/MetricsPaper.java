@@ -209,7 +209,7 @@ public class MetricsPaper implements Storable {
         LOGGER.info("本次更新论文" + Log.getUpdateTotalNumbers().get() + "篇，"
                 + "正在更新第" + Log.getCurrentUpdateNumbers().incrementAndGet() + "篇\n"
                 + "链接为：" + getUrl());
-        final SqlSession sqlSession= SqlHelper.openSqlSession();
+        final SqlSession sqlSession= SqlHelper.openThreadSqlSession();
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
         LogMapper logMapper = sqlSession.getMapper(LogMapper.class);
         boolean succeed = paperMapper.saveMetricsPaper(this);
@@ -221,12 +221,12 @@ public class MetricsPaper implements Storable {
             LOGGER.error("当前共有" + Log.getUpdateFailedNumbers().incrementAndGet() + "篇论文相关指标更新失败..."
                     + "链接为:" + getUrl());
         }
-        boolean isSuccess = ESClient.getInstance().updateMetricsPaperIntoES(this);//更新论文指标到ElasticSearch中的REF_DATA
-        if (isSuccess) {
-            LOGGER.info("更新论文指标到ElasticSearch中的METRICS_PAPER成功");
-        } else {
-            System.err.println("更新论文指标到ElasticSearch中的METRICS_PAPER失败");
-        }
+//        boolean isSuccess = ESClient.getInstance().updateMetricsPaperIntoES(this);//更新论文指标到ElasticSearch中的REF_DATA
+//        if (isSuccess) {
+//            LOGGER.info("更新论文指标到ElasticSearch中的METRICS_PAPER成功");
+//        } else {
+//            System.err.println("更新论文指标到ElasticSearch中的METRICS_PAPER失败");
+//        }
         //保存更新的具体日志数据到数据库中
 
 //        succeed = logMapper.saveUpdateDetailLog(getUrl(),
@@ -241,12 +241,10 @@ public class MetricsPaper implements Storable {
 //            LOGGER.error("更新过程具体日志保存失败");
 //        }
         //更新完成，打印、保存日志和更新任务状态
-        System.err.println(Log.getCurrentUpdateNumbers().get()+"--------------Before-------------"+Log.getUpdateTotalNumbers().get());
         if (Log.getCurrentUpdateNumbers().get() == Log.getUpdateTotalNumbers().get()) {
             LOGGER.info("更新完成，本次更新相关指标论文总量：" + Log.getUpdateTotalNumbers().get()
                     + " 成功数：" + Log.getUpdateSucceedNumbers().get()
                     + " 失败数：" + Log.getUpdateFailedNumbers().get());
-            System.err.println("--------------After-------------");
             long startTime = DateHelper.getUpdateStartTimeMills();  //开始更新的时间
             long endTime = System.currentTimeMillis();//更新结束的时间
             String averageTime = DateHelper.getSeconds((endTime - startTime) / Log.getUpdateTotalNumbers().get());

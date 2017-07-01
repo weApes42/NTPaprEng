@@ -168,7 +168,7 @@ public final class Helper {
         SqlSession sqlSession = SqlHelper.openSqlSession();
         UtilMapper utilMapper = sqlSession.getMapper(UtilMapper.class);
         utilMapper.listPaperLink().stream()
-                .forEach(url -> paperMetricsLinks.add(new PaperMetricsLink(url)));
+                .forEach(url -> paperMetricsLinks.add(new PaperMetricsLink(getPaperMetricsUrl(url))));
         sqlSession.close();
         return paperMetricsLinks;
     }
@@ -196,7 +196,7 @@ public final class Helper {
         SqlSession sqlSession = SqlHelper.openSqlSession();
         UtilMapper mapper = sqlSession.getMapper(UtilMapper.class);
         int taskPeriod=mapper.getTaskPeriod();
-        SqlHelper.closeSqlSession();
+        sqlSession.close();
         return taskPeriod;
     }
     // 将原来的论文详细页面url进行字符串处理，转化为metric相关指标页面url
@@ -208,5 +208,4 @@ public final class Helper {
         String subString2 = subString1.substring(5, index2);
         return subString + subString2 + "/metrics";
     }
-
 }

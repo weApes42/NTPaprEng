@@ -147,12 +147,12 @@ public class PaperWebPage extends WebPage {
     // PageRange抽取后格式="begin-end",需要根据-位置进行再处理
     private String parsePageBegin(final Document dom) {
         final String pageRange = dom.select(PAGE_CSS_SELECTOR).text();
-        return pageRange.contains("-") ? pageRange.substring(0, pageRange.indexOf("–")) : pageRange;
+        return pageRange.contains("–") ? pageRange.substring(0, pageRange.indexOf("–")) : pageRange;
     }
 
     private String parsePageEnd(final Document dom) {
         final String pageRange = dom.select(PAGE_CSS_SELECTOR).text();
-        return pageRange.contains("-") ? pageRange.substring(pageRange.indexOf("–") + 1) : pageRange;
+        return pageRange.contains("–") ? pageRange.substring(pageRange.indexOf("–") + 1) : pageRange;
     }
 
     private String parseAffiliation(final Document dom) {

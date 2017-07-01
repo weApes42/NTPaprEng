@@ -32,11 +32,14 @@ public class SqlHelper {
         }
     }
     public static SqlSession openSqlSession(){
+        return sqlSessionFactory.openSession(true);
+    }
+    public static SqlSession openThreadSqlSession(){
         //从当前线程获取
         SqlSession sqlSession =sqlSessionThreadLocal.get();
         if(sqlSession == null){
             sqlSession = sqlSessionFactory.openSession(true);
-            System.err.println("新建SqlSession");
+//            System.err.println("新建SqlSession");
             //将sqlSession与当前线程绑定
             sqlSessionThreadLocal.set(sqlSession);
         }

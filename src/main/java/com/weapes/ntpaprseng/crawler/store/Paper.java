@@ -185,7 +185,7 @@ public class Paper implements Storable {
         if (Log.getUrlNumbers().get() == Log.getCrawlingNumbers().get()) { //记录最后一篇论文链接
             Log.setLastLink(getUrl());
         }
-        final SqlSession sqlSession = SqlHelper.openSqlSession();
+        final SqlSession sqlSession = SqlHelper.openThreadSqlSession();
         LOGGER.info("保存爬取的数据: type=Paper");
         PaperMapper paperMapper = sqlSession.getMapper(PaperMapper.class);
         boolean isSucceed = paperMapper.savePaper(this);
